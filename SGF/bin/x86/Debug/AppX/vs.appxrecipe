@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-19T03:33:32.290</Modified>
+      <Modified>2015-11-19T04:29:02.955</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +74,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\bin\x86\Debug\Core\entrypoint\SGF.exe">
       <PackagePath>entrypoint\SGF.exe</PackagePath>
-      <Modified>2015-11-19T03:33:29.769</Modified>
+      <Modified>2015-11-19T04:29:01.661</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -106,15 +106,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-19T03:33:31.266</Modified>
+      <Modified>2015-11-19T04:29:02.494</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\bin\x86\Debug\Core\SGF.exe">
       <PackagePath>SGF.exe</PackagePath>
-      <Modified>2015-11-19T03:33:32.285</Modified>
+      <Modified>2015-11-19T04:29:02.951</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\bin\x86\Debug\Core\SGF.xr.xml">
       <PackagePath>SGF.xr.xml</PackagePath>
-      <Modified>2015-11-19T03:10:52.907</Modified>
+      <Modified>2015-11-19T04:22:39.817</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

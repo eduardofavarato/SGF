@@ -8,9 +8,33 @@
     mc:Ignorable="d">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-            <TextBlock Text="Nome do Usuário" />
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image x:Name="image_logo" Source="Assets/img/logo.gif" Style="{StaticResource image_logo}"/>
+            <TextBlock x:Name="textBlock_splashScreen" Text="Sistema de Gestão de Frequência" Style="{StaticResource textBlock_splashScreen}" Margin="10"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="2" 
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            
+            <!-- Dados Login -->
+            <TextBlock Text="Login do usuário" Style="{StaticResource defaultTextBlock}"/>
+            <TextBox x:Name="textBox_Usuario" PlaceholderText="Digite seu login" Margin="0,0,0,15"/>
+            <TextBlock Text="Senha do usuário" Style="{StaticResource defaultTextBlock}"/>
+            <TextBox x:Name="textBox_Senha" PlaceholderText="Digite sua senha" />
         </StackPanel>
     </Grid>
 </Page>

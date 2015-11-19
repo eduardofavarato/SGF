@@ -439,3 +439,8 @@ C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\obj\
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\obj\x86\Debug\Splash.g.cs
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\obj\x86\Debug\Splash.xaml
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\obj\x86\Debug\Splash.xbf
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\bin\x86\Debug\Login.xbf
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\obj\x86\Debug\Login.g.i.cs
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\obj\x86\Debug\Login.g.cs
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\obj\x86\Debug\Login.xaml
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF\obj\x86\Debug\Login.xbf
