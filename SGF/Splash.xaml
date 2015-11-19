@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="SGF.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SGF"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!-- Splash Screen -->
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" >
+            <Image x:Name="image_logo" Source="Assets/img/logo.gif" Style="{StaticResource image_logo}"/>
+            <TextBlock x:Name="textBlock_splashScreen" Text="Sistema de Gestão de Frequência" Style="{StaticResource textBlock_splashScreen}"/>            
+        </StackPanel>        
+    </Grid>
+</Page>
