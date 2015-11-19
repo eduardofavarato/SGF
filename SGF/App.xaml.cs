@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,11 +23,20 @@ namespace SGF
     /// </summary>
     sealed partial class App : Application
     {
-        /// <summary>
-        /// Initializes the singleton application object.  This is the first line of authored code
-        /// executed, and as such is the logical equivalent of main() or WinMain().
-        /// </summary>
-        public App()
+		//public static MobileServiceClient MobileService = new MobileServiceClient(
+		//  "http://localhost:59230"
+		//);
+		// Use this constructor instead after publishing to the cloud
+		public static MobileServiceClient MobileService = new MobileServiceClient(
+			 "https://sgfservice.azure-mobile.net/",
+			 "QAmtcLujosdxWsAvnQUqgNLOHGutUW92"
+	   );
+
+		/// <summary>
+		/// Initializes the singleton application object.  This is the first line of authored code
+		/// executed, and as such is the logical equivalent of main() or WinMain().
+		/// </summary>
+		public App()
         {
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |

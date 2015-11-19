@@ -102,6 +102,20 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\Aluno.cs" />
+    <Compile Include="Model\Aula.cs" />
+    <Compile Include="Model\Aviso.cs" />
+    <Compile Include="Model\Disciplina.cs" />
+    <Compile Include="Model\Frequencia.cs" />
+    <Compile Include="Model\Nota.cs" />
+    <Compile Include="Model\Professor.cs" />
+    <Compile Include="Model\Responsavel.cs" />
+    <Compile Include="Model\ResponsavelAluno.cs" />
+    <Compile Include="Model\Serie.cs" />
+    <Compile Include="Model\Turma.cs" />
+    <Compile Include="Model\TurmaDisciplina.cs" />
+    <Compile Include="Model\Usuario.cs" />
     <Compile Include="Splash.xaml.cs">
       <DependentUpon>Splash.xaml</DependentUpon>
     </Compile>
