@@ -26,4 +26,9 @@
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
     <!-- Fim style spalsh Screen -->
+
+    <!-- Inicio style Login -->
+    <Style TargetType="TextBox">
+        
+    </Style>
 </ResourceDictionary>
