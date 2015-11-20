@@ -684,7 +684,6 @@ C:\Users\s2bdev\Desktop\SGF\SGF\bin\x86\Debug\System.Xml.ReaderWriter.dll
 C:\Users\s2bdev\Desktop\SGF\SGF\bin\x86\Debug\System.Xml.XDocument.dll
 C:\Users\s2bdev\Desktop\SGF\SGF\bin\x86\Debug\System.Xml.XmlDocument.dll
 C:\Users\s2bdev\Desktop\SGF\SGF\bin\x86\Debug\System.Xml.XmlSerializer.dll
-C:\Users\s2bdev\Desktop\SGF\SGF\obj\x86\Debug\SGF.csprojResolveAssemblyReference.cache
 C:\Users\s2bdev\Desktop\SGF\SGF\obj\x86\Debug\App.g.i.cs
 C:\Users\s2bdev\Desktop\SGF\SGF\obj\x86\Debug\App.g.cs
 C:\Users\s2bdev\Desktop\SGF\SGF\obj\x86\Debug\Login.g.i.cs

@@ -9,7 +9,9 @@ namespace SGF.Model
 {
 	class Professor
 	{
-		public Usuario Usuario { get; set; }
+        public string Id { get; set; }
+
+        public Usuario Usuario { get; set; }
 
 		[JsonProperty(PropertyName = "matricula")]
 		public string Matricula { get; set; }

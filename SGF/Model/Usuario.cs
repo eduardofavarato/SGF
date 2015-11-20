@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SGF.Model
 {
-	class Usuario
+	public class Usuario
 	{
 		public string Id { get; set; }
 

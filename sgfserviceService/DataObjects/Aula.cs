@@ -12,7 +12,9 @@ namespace sgfserviceService.DataObjects
 	{
 		public bool Presenca { get; set; }
 
-		[ForeignKey("FrequenciaId")]
+        public string FrequenciaId { get; set; }
+
+        [ForeignKey("FrequenciaId")]
 		public virtual Frequencia Frequencia { get; set; }
 	}
 }

@@ -10,7 +10,9 @@ namespace sgfserviceService.DataObjects
 {
 	public class Aviso : EntityData
 	{
-		[ForeignKey("TurmaDisciplinaId")]
+        public string TurmaDisciplinaId { get; set; }
+
+        [ForeignKey("TurmaDisciplinaId")]
 		public virtual TurmaDisciplina TurmaDisciplina { get; set; }
 	}
 }

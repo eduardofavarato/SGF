@@ -44,7 +44,7 @@ namespace sgfserviceService.Models
 
 		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Professor> Professores { get; set; }
 
-		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Aluno> Alunos { get; set; }
+	    public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Aluno> Alunos { get; set; }
 
 		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Admin> Admins { get; set; }
 

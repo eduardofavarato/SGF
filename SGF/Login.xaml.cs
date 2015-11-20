@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using SGF.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,14 +27,22 @@ namespace SGF
         public Login()
         {
             this.InitializeComponent();
+            //insertAdmin();
             getAdminList();
         }
 
         public async void getAdminList()
         {
-            IMobileServiceTable<Admin> admin = App.MobileService.GetTable<Admin>();
-            MobileServiceCollection<Admin, Admin> adminCollection;
+            IMobileServiceTable<Usuario> admin = App.MobileService.GetTable<Usuario>();
+            
+            MobileServiceCollection<Usuario, Usuario> adminCollection;
             adminCollection = await admin.ToCollectionAsync();
+        }
+
+        public async void insertAdmin()
+        {
+            Admin item = new Admin { Matricula = "1", Usuario = new Usuario() { Login="admin", Nome="Teste", Senha="teste" } };
+            await App.MobileService.GetTable<Admin>().InsertAsync(item);
         }
     }
 }

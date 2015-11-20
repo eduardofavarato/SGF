@@ -29,8 +29,8 @@ namespace SGF
 		// Use this constructor instead after publishing to the cloud
 		public static MobileServiceClient MobileService = new MobileServiceClient(
 			 "https://sgfservice.azure-mobile.net/",
-			 "QAmtcLujosdxWsAvnQUqgNLOHGutUW92"
-	   );
+             "QAmtcLujosdxWsAvnQUqgNLOHGutUW92"
+       );
 
 		/// <summary>
 		/// Initializes the singleton application object.  This is the first line of authored code

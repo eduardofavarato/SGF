@@ -17,7 +17,9 @@ namespace sgfserviceService.DataObjects
 
 		public string Matricula { get; set; }
 
-		[ForeignKey("TurmaId")]
+        public string TurmaId { get; set; }
+
+        [ForeignKey("TurmaId")]
 		public virtual Turma Turma { get; set; }
 	}
 }

@@ -10,10 +10,14 @@ namespace sgfserviceService.DataObjects
 {
 	public class Frequencia : EntityData
 	{
-		[ForeignKey("TurmaDisciplinaId")]
+        public string TurmaDisciplinaId { get; set; }
+
+        [ForeignKey("TurmaDisciplinaId")]
 		public virtual TurmaDisciplina TurmaDisciplina { get; set; }
 
-		[ForeignKey("AlunoId")]
+        public string AlunoId { get; set; }
+
+        [ForeignKey("AlunoId")]
 		public virtual Aluno Aluno { get; set; }
 	}
 }

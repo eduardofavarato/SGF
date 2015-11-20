@@ -8,6 +8,8 @@ namespace SGF.Model
 {
 	class Responsavel
 	{
-		public Usuario Usuario { get; set; }
+        public string Id { get; set; }
+
+        public Usuario Usuario { get; set; }
 	}
 }
