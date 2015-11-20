@@ -25,6 +25,14 @@ namespace SGF
         public Login()
         {
             this.InitializeComponent();
+            getAdminList();
+        }
+
+        public async void getAdminList()
+        {
+            IMobileServiceTable<Admin> admin = App.MobileService.GetTable<Admin>();
+            MobileServiceCollection<Admin, Admin> adminCollection;
+            adminCollection = await admin.ToCollectionAsync();
         }
     }
 }
