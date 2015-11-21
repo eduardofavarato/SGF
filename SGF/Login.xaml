@@ -14,8 +14,9 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -27,13 +28,22 @@
             <Image x:Name="image_logo" Source="Assets/img/logo.gif" Style="{StaticResource image_logo}"/>
             <TextBlock x:Name="textBlock_splashScreen" Text="Sistema de Gestão de Frequência" Style="{StaticResource textBlock_splashScreen}" Margin="10"/>
         </StackPanel>
-        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="2" 
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" 
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch">            
             <!-- Dados Login -->
             <TextBlock Text="Login do usuário" Style="{StaticResource defaultTextBlock}"/>
             <TextBox x:Name="textBox_Usuario" PlaceholderText="Digite seu login" Margin="0,0,0,15"/>
             <TextBlock Text="Senha do usuário" Style="{StaticResource defaultTextBlock}"/>
             <TextBox x:Name="textBox_Senha" PlaceholderText="Digite sua senha" />
-        </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Stretch" VerticalAlignment="top" />
+                <Button Grid.Column="2" x:Name="btnLogin" Content="Logar" HorizontalAlignment="Stretch" VerticalAlignment="top" />
+            </Grid>
+        </StackPanel>        
     </Grid>
 </Page>

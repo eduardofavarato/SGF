@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,13 @@ namespace SGF
         public Splash()
         {
             this.InitializeComponent();
+            carregarConfigruracoes();
+        }
+
+        private async void carregarConfigruracoes()
+        {
+            await Task.Delay(TimeSpan.FromMilliseconds(1000));
+            this.Frame.Navigate(typeof(Login));
         }
     }
 }
