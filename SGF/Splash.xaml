@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="SGF.MainPage"
+    x:Class="SGF.Splash"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:SGF"
@@ -9,9 +9,14 @@
 
     <!-- Splash Screen -->
     <Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" >
             <Image x:Name="image_logo" Source="Assets/img/logo.gif" Style="{StaticResource image_logo}"/>
             <TextBlock x:Name="textBlock_splashScreen" Text="Sistema de Gestão de Frequência" Style="{StaticResource textBlock_splashScreen}"/>            
-        </StackPanel>        
+        </StackPanel>
+        <ProgressRing Grid.Row="1" Foreground="DarkBlue" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Height="100" IsActive="True" />
     </Grid>
 </Page>

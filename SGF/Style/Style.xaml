@@ -5,12 +5,11 @@
 
     <!-- Style default app -->
     <Style TargetType="Grid">
-        <Setter Property="Background" Value="#6A5ACD" />
+        <Setter Property="Background" Value="White" />
     </Style>
     <Style x:Key="defaultTextBlock" TargetType="TextBlock">
         <Setter Property="FontFamily" Value="Segoe UI" />
         <Setter Property="FontSize" Value="16" />
-        <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontWeight" Value="Light" />
         <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
@@ -33,6 +32,6 @@
 
     <!-- Inicio style Login -->
     <Style x:Key="textBoxLogin" TargetType="TextBox">
-        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Center" />
     </Style>
 </ResourceDictionary>

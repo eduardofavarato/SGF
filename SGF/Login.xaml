@@ -28,8 +28,7 @@
             <TextBlock x:Name="textBlock_splashScreen" Text="Sistema de Gestão de Frequência" Style="{StaticResource textBlock_splashScreen}" Margin="10"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="2" 
-                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch">            
             <!-- Dados Login -->
             <TextBlock Text="Login do usuário" Style="{StaticResource defaultTextBlock}"/>
             <TextBox x:Name="textBox_Usuario" PlaceholderText="Digite seu login" Margin="0,0,0,15"/>

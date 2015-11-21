@@ -136,13 +136,13 @@ namespace SGF.SGF_XamlTypeInfo
             _typeNameTable[0] = "SGF.Login";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "SGF.MainPage";
+            _typeNameTable[3] = "SGF.Splash";
 
             _typeTable = new global::System.Type[4];
             _typeTable[0] = typeof(global::SGF.Login);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::SGF.MainPage);
+            _typeTable[3] = typeof(global::SGF.Splash);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -178,7 +178,7 @@ namespace SGF.SGF_XamlTypeInfo
         }
 
         private object Activate_0_Login() { return new global::SGF.Login(); }
-        private object Activate_3_MainPage() { return new global::SGF.MainPage(); }
+        private object Activate_3_Splash() { return new global::SGF.Splash(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -205,9 +205,9 @@ namespace SGF.SGF_XamlTypeInfo
                 xamlType = new global::SGF.SGF_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  SGF.MainPage
+            case 3:   //  SGF.Splash
                 userType = new global::SGF.SGF_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_3_Splash;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
