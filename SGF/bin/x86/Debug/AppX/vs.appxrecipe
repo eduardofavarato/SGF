@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-23T05:25:03.601</Modified>
+      <Modified>2015-11-23T05:44:34.791</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +74,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\entrypoint\SGF.exe">
       <PackagePath>entrypoint\SGF.exe</PackagePath>
-      <Modified>2015-11-23T05:25:00.824</Modified>
+      <Modified>2015-11-23T05:44:33.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -118,11 +118,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-23T05:25:01.998</Modified>
+      <Modified>2015-11-23T05:44:33.989</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SGF.exe">
       <PackagePath>SGF.exe</PackagePath>
-      <Modified>2015-11-23T05:25:03.596</Modified>
+      <Modified>2015-11-23T05:44:34.790</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SGF.xr.xml">
       <PackagePath>SGF.xr.xml</PackagePath>

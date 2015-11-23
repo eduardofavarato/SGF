@@ -33,8 +33,8 @@ namespace SGF
             this.InitializeComponent();
             carregarCofiguracao();
 
-            // insertAdmin();
-            // getAdminList();
+            insertAdmin();
+            getAdminList();
         }
 
         public async void getAdminList()
@@ -47,8 +47,8 @@ namespace SGF
 
         public async void insertAdmin()
         {
-            Admin item = new Admin { Matricula = "1", Usuario = new Usuario() { Login="admin", Nome="Teste", Senha="teste" } };
-            await App.MobileService.GetTable<Admin>().InsertAsync(item);
+            Admin admin = new Admin { Matricula = "1", Usuario = new Usuario() { Login="admin", Nome="Teste", Senha="teste" } };
+            await App.MobileService.GetTable<Admin>().InsertAsync(admin);
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
