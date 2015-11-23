@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SGF.Class;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,12 +26,14 @@ namespace SGF
     {
         public Splash()
         {
-            this.InitializeComponent();
-            carregarConfigruracoes();
+            this.InitializeComponent();           
+            carregarConfigruracoes(); //configurações do app.
         }
 
         private async void carregarConfigruracoes()
         {
+            Conection conexao = new Conection(); //carregando conexao offline.
+
             await Task.Delay(TimeSpan.FromMilliseconds(1000));
             this.Frame.Navigate(typeof(Login));
         }

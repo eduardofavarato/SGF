@@ -24,9 +24,15 @@ namespace SGF
     /// </summary>
     public sealed partial class Login : Page
     {
+        // criando um  objeto de configuração.
+        Windows.Storage.ApplicationDataContainer localsettings =
+            Windows.Storage.ApplicationData.Current.LocalSettings;
+
         public Login()
         {
             this.InitializeComponent();
+            carregarCofiguracao();
+
             // insertAdmin();
             // getAdminList();
         }
@@ -48,11 +54,30 @@ namespace SGF
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             processaLogin(textBox_Usuario.Text, textBox_Senha.Text);
+            salvarConfiguracao();
         }
 
         private void processaLogin(string login, string senha)
         {
             // Implementar consulta no banco...
+        }
+
+
+        private void salvarConfiguracao()
+        {
+            // criando uma configuração simples. 
+            localsettings.CreateContainer("nome_usuario", Windows.Storage.ApplicationDataCreateDisposition.Always);
+            localsettings.Values["nome_usuario"] = textBox_Usuario.Text;
+        }
+
+        private void carregarCofiguracao()
+        {
+            // validando se existe a configuração.
+            if (localsettings.Containers.ContainsKey("nome_usuario"))
+            {
+                string data = localsettings.Values["nome_usuario"].ToString();
+                textBox_Usuario.Text = data; // retornando o resultado da busca
+            }
         }
     }
 }

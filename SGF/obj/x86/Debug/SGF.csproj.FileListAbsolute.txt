@@ -1352,7 +1352,6 @@ C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\System.Xml.XmlDocument.dll
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\System.Xml.XmlSerializer.dll
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\ApplicationInsights.config
-C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\Assets\img\logo.gif
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\Assets\SplashScreen.scale-200.png
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png
@@ -1376,3 +1375,16 @@ C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Admin.xaml
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Admin.xbf
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Admin.xbf
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\SQLitePCL.Ext.dll
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\SQLitePCL.Ext.pri
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\sqlite3.dll
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\sqlite3.pdb
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SQLitePCL.dll
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SQLitePCL.Ext.dll
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\SQLitePCL.dll
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\SQLitePCL\en\SQLitePCL.Resources.resw
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\SQLitePCL.Ext.pri.xml
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\SQLitePCL.dll
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\sqlite3.dll
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\sqlite3.pdb
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\SQLitePCL.Ext.dll

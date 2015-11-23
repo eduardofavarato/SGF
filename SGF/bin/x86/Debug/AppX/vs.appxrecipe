@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>c52f2a78-c6f1-430f-844c-e2702490f766</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>E8563694C2228AA1A5B4BB03D0EC6BCF2D22C0E4D4B0CE80E024E7076D24989D</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>6AEADC6AF10F5E2B9286DEE3020B273BBC3C9AE3AC9C772B2E37B684F8842196</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c52f2a78-c6f1-430f-844c-e2702490f766_1.0.0.0_x86__kgfagwsqtvck8</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c52f2a78-c6f1-430f-844c-e2702490f766_kgfagwsqtvck8!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c52f2a78-c6f1-430f-844c-e2702490f766</RegisteredPackageID>
@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-23T04:20:07.061</Modified>
+      <Modified>2015-11-23T05:25:03.601</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +74,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\entrypoint\SGF.exe">
       <PackagePath>entrypoint\SGF.exe</PackagePath>
-      <Modified>2015-11-23T04:20:02.673</Modified>
+      <Modified>2015-11-23T05:25:00.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -118,15 +118,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-23T04:20:03.986</Modified>
+      <Modified>2015-11-23T05:25:01.998</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SGF.exe">
       <PackagePath>SGF.exe</PackagePath>
-      <Modified>2015-11-23T04:20:07.056</Modified>
+      <Modified>2015-11-23T05:25:03.596</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SGF.xr.xml">
       <PackagePath>SGF.xr.xml</PackagePath>
       <Modified>2015-11-23T04:20:02.282</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\sqlite3.dll">
+      <PackagePath>sqlite3.dll</PackagePath>
+      <Modified>2015-11-12T17:36:52.659</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SQLitePCL.dll">
+      <PackagePath>SQLitePCL.dll</PackagePath>
+      <Modified>2015-11-16T04:20:30.367</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SQLitePCL.Ext.dll">
+      <PackagePath>SQLitePCL.Ext.dll</PackagePath>
+      <Modified>2015-11-16T04:20:30.201</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
