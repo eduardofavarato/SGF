@@ -14,7 +14,6 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" >
-            <Image x:Name="image_logo" Source="Assets/img/logo.gif" Style="{StaticResource image_logo}"/>
             <TextBlock x:Name="textBlock_splashScreen" Text="Sistema de Gestão de Frequência" Style="{StaticResource textBlock_splashScreen}"/>            
         </StackPanel>
         <ProgressRing Grid.Row="1" Foreground="DarkBlue" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Height="100" IsActive="True" />

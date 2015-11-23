@@ -25,7 +25,6 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image x:Name="image_logo" Source="Assets/img/logo.gif" Style="{StaticResource image_logo}"/>
             <TextBlock x:Name="textBlock_splashScreen" Text="Sistema de Gestão de Frequência" Style="{StaticResource textBlock_splashScreen}" Margin="10"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="3" 
@@ -42,7 +41,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Stretch" VerticalAlignment="top" />
-                <Button Grid.Column="2" x:Name="btnLogin" Content="Logar" HorizontalAlignment="Stretch" VerticalAlignment="top" />
+                <Button Grid.Column="2" x:Name="btnLogin" Content="Logar" HorizontalAlignment="Stretch" VerticalAlignment="top" Click="btnLogin_Click" />
             </Grid>
         </StackPanel>        
     </Grid>

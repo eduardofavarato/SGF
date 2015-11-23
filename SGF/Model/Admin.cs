@@ -10,6 +10,7 @@ namespace SGF.Model
 	class Admin
 	{
         public string Id { get; set; }
+
         public Usuario Usuario { get; set; }
 
 		[JsonProperty(PropertyName = "matricula")]

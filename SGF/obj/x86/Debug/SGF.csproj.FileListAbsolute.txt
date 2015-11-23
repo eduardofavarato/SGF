@@ -1371,3 +1371,8 @@ C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\Properties\Default.rd.xml
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\SGF.xr.xml
 C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Core\resources.pri
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Admin.g.i.cs
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Admin.g.cs
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Admin.xaml
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\Admin.xbf
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Admin.xbf

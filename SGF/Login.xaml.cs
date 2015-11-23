@@ -27,8 +27,8 @@ namespace SGF
         public Login()
         {
             this.InitializeComponent();
-            //insertAdmin();
-            getAdminList();
+            // insertAdmin();
+            // getAdminList();
         }
 
         public async void getAdminList()
@@ -43,6 +43,16 @@ namespace SGF
         {
             Admin item = new Admin { Matricula = "1", Usuario = new Usuario() { Login="admin", Nome="Teste", Senha="teste" } };
             await App.MobileService.GetTable<Admin>().InsertAsync(item);
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            processaLogin(textBox_Usuario.Text, textBox_Senha.Text);
+        }
+
+        private void processaLogin(string login, string senha)
+        {
+            // Implementar consulta no banco...
         }
     }
 }

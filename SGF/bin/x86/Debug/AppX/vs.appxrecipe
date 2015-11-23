@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-21T15:36:31.973</Modified>
+      <Modified>2015-11-23T04:20:07.061</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +74,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\entrypoint\SGF.exe">
       <PackagePath>entrypoint\SGF.exe</PackagePath>
-      <Modified>2015-11-21T15:36:29.722</Modified>
+      <Modified>2015-11-23T04:20:02.673</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -118,15 +118,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-21T15:36:30.904</Modified>
+      <Modified>2015-11-23T04:20:03.986</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SGF.exe">
       <PackagePath>SGF.exe</PackagePath>
-      <Modified>2015-11-21T15:36:31.969</Modified>
+      <Modified>2015-11-23T04:20:07.056</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SGF.xr.xml">
       <PackagePath>SGF.xr.xml</PackagePath>
-      <Modified>2015-11-21T15:36:29.378</Modified>
+      <Modified>2015-11-23T04:20:02.282</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
