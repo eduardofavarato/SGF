@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace SGF.Model
 {
-	class Admin
+	public class Admin
 	{
         public string Id { get; set; }
+
+        public string UsuarioId { get; set; }
 
         public Usuario Usuario { get; set; }
 

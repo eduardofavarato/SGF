@@ -237,6 +237,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Properties\PublishProfiles\mobile-sgfservice %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\mobile-sgfservice.pubxml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace SGF.Model
 {
-	class Aula
+	public class Aula
 	{
 		public string Id { get; set; }
 
 		[JsonProperty(PropertyName = "presenca")]
 		public bool Presenca { get; set; }
 
-		public Frequencia Frequencia { get; set; }
+        public string FrequenciaId { get; set; }
+        public Frequencia Frequencia { get; set; }
 	}
 }

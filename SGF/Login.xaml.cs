@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -31,24 +32,10 @@ namespace SGF
         public Login()
         {
             this.InitializeComponent();
-            carregarCofiguracao();
-
-            insertAdmin();
-            getAdminList();
-        }
-
-        public async void getAdminList()
-        {
-            IMobileServiceTable<Usuario> admin = App.MobileService.GetTable<Usuario>();
-            
-            MobileServiceCollection<Usuario, Usuario> adminCollection;
-            adminCollection = await admin.ToCollectionAsync();
-        }
-
-        public async void insertAdmin()
-        {
-            Admin admin = new Admin { Matricula = "1", Usuario = new Usuario() { Login="admin", Nome="Teste", Senha="teste" } };
-            await App.MobileService.GetTable<Admin>().InsertAsync(admin);
+            carregarConfiguracao();
+            //databaseMethods.insertAdmin("admin", "Admin", "admin", "admin");
+            //databaseMethods.insertProfessor("professor", "Professor", "professor", "professor");
+            //databaseMethods.insertResponsavel("responsavel", "Responsavel", "responsavel");
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -57,9 +44,19 @@ namespace SGF
             salvarConfiguracao();
         }
 
-        private void processaLogin(string login, string senha)
+        private async void processaLogin(string login, string senha)
         {
-            // Implementar consulta no banco...
+            bool acesso = await databaseMethods.checkLogin(login, senha);
+            if (acesso)
+            {
+                var dialog = new MessageDialog("Acesso Garantido!");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                var dialog = new MessageDialog("Acesso Negado!");
+                await dialog.ShowAsync();
+            }
         }
 
 
@@ -70,7 +67,7 @@ namespace SGF
             localsettings.Values["nome_usuario"] = textBox_Usuario.Text;
         }
 
-        private void carregarCofiguracao()
+        private void carregarConfiguracao()
         {
             // validando se existe a configuração.
             if (localsettings.Containers.ContainsKey("nome_usuario"))

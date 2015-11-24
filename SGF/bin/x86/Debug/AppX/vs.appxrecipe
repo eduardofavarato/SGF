@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>PAULORICARDO</Machine>
-    <WindowsUser>prica_000</WindowsUser>
+    <Machine>MICL-16</Machine>
+    <WindowsUser>s2bdev</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>c52f2a78-c6f1-430f-844c-e2702490f766</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\s2bdev\Source\Repos\SGF\SGF\obj\x86\Debug\</IntermediateOutputPath>
     <RegisteredManifestChecksum>6AEADC6AF10F5E2B9286DEE3020B273BBC3C9AE3AC9C772B2E37B684F8842196</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c52f2a78-c6f1-430f-844c-e2702490f766_1.0.0.0_x86__kgfagwsqtvck8</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c52f2a78-c6f1-430f-844c-e2702490f766_kgfagwsqtvck8!App</RegisteredUserModeAppID>
@@ -19,534 +19,530 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-23T05:44:34.791</Modified>
+      <Modified>2015-11-24T22:45:04.804</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\ApplicationInsights.config">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
-      <Modified>2015-11-20T22:41:20.812</Modified>
+      <Modified>2015-11-24T18:27:39.472</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Assets\img\logo.gif">
-      <PackagePath>Assets\img\logo.gif</PackagePath>
-      <Modified>2015-11-20T22:41:20.815</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2015-11-20T22:41:20.816</Modified>
+      <Modified>2015-11-24T18:27:39.473</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-20T22:41:20.817</Modified>
+      <Modified>2015-11-24T18:27:39.474</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-20T22:41:21.057</Modified>
+      <Modified>2015-11-24T18:27:39.475</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-20T22:41:21.059</Modified>
+      <Modified>2015-11-24T18:27:39.476</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-20T22:41:21.060</Modified>
+      <Modified>2015-11-24T18:27:39.477</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-20T22:41:21.061</Modified>
+      <Modified>2015-11-24T18:27:39.478</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-20T22:41:21.063</Modified>
+      <Modified>2015-11-24T18:27:39.479</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\ClrCompression.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\ClrCompression.dll">
       <PackagePath>ClrCompression.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.136</Modified>
+      <Modified>2015-11-03T15:56:13.591</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\entrypoint\SGF.exe">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\entrypoint\SGF.exe">
       <PackagePath>entrypoint\SGF.exe</PackagePath>
-      <Modified>2015-11-23T05:44:33.355</Modified>
+      <Modified>2015-11-24T22:44:55.442</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.139</Modified>
+      <Modified>2015-11-03T15:55:56.293</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Microsoft.ApplicationInsights.Extensibility.Windows.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Microsoft.ApplicationInsights.Extensibility.Windows.dll">
       <PackagePath>Microsoft.ApplicationInsights.Extensibility.Windows.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.141</Modified>
+      <Modified>2015-11-03T15:55:56.809</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Microsoft.ApplicationInsights.PersistenceChannel.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Microsoft.ApplicationInsights.PersistenceChannel.dll">
       <PackagePath>Microsoft.ApplicationInsights.PersistenceChannel.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.143</Modified>
+      <Modified>2015-11-03T15:55:56.670</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Microsoft.CSharp.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.149</Modified>
+      <Modified>2015-11-03T15:56:04.935</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Microsoft.VisualBasic.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Microsoft.VisualBasic.dll">
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.152</Modified>
+      <Modified>2015-11-03T15:56:04.828</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Microsoft.Win32.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Microsoft.Win32.Primitives.dll">
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.153</Modified>
+      <Modified>2015-11-03T15:56:00.893</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Microsoft.WindowsAzure.Mobile.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Microsoft.WindowsAzure.Mobile.dll">
       <PackagePath>Microsoft.WindowsAzure.Mobile.dll</PackagePath>
-      <Modified>2015-11-20T02:43:01.910</Modified>
+      <Modified>2015-11-24T18:04:41.311</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Microsoft.WindowsAzure.Mobile.Ext.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Microsoft.WindowsAzure.Mobile.Ext.dll">
       <PackagePath>Microsoft.WindowsAzure.Mobile.Ext.dll</PackagePath>
-      <Modified>2015-11-20T02:43:01.931</Modified>
+      <Modified>2015-11-24T18:04:41.354</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2015-11-20T02:43:02.095</Modified>
+      <Modified>2015-11-24T18:04:41.054</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2015-11-20T22:41:26.294</Modified>
+      <Modified>2015-11-24T18:27:48.739</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\resources.pri">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-23T05:44:33.989</Modified>
+      <Modified>2015-11-24T22:45:04.125</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SGF.exe">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\SGF.exe">
       <PackagePath>SGF.exe</PackagePath>
-      <Modified>2015-11-23T05:44:34.790</Modified>
+      <Modified>2015-11-24T22:45:04.803</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SGF.xr.xml">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\SGF.xr.xml">
       <PackagePath>SGF.xr.xml</PackagePath>
-      <Modified>2015-11-23T04:20:02.282</Modified>
+      <Modified>2015-11-24T20:39:11.960</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
-      <Modified>2015-11-12T17:36:52.659</Modified>
+      <Modified>2015-11-12T17:36:29.808</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SQLitePCL.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\SQLitePCL.dll">
       <PackagePath>SQLitePCL.dll</PackagePath>
-      <Modified>2015-11-16T04:20:30.367</Modified>
+      <Modified>2015-11-24T18:04:41.261</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\SQLitePCL.Ext.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\SQLitePCL.Ext.dll">
       <PackagePath>SQLitePCL.Ext.dll</PackagePath>
-      <Modified>2015-11-16T04:20:30.201</Modified>
+      <Modified>2015-11-24T18:04:40.802</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.AppContext.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.164</Modified>
+      <Modified>2015-11-03T15:56:04.506</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Collections.Concurrent.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Collections.Concurrent.dll">
       <PackagePath>System.Collections.Concurrent.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.166</Modified>
+      <Modified>2015-11-03T15:56:04.486</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Collections.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.167</Modified>
+      <Modified>2015-11-03T15:56:04.629</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Collections.Immutable.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Collections.Immutable.dll">
       <PackagePath>System.Collections.Immutable.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.241</Modified>
+      <Modified>2015-11-03T15:56:04.766</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Collections.NonGeneric.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Collections.NonGeneric.dll">
       <PackagePath>System.Collections.NonGeneric.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.243</Modified>
+      <Modified>2015-11-03T15:56:03.534</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Collections.Specialized.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Collections.Specialized.dll">
       <PackagePath>System.Collections.Specialized.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.245</Modified>
+      <Modified>2015-11-03T15:55:59.933</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ComponentModel.Annotations.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ComponentModel.Annotations.dll">
       <PackagePath>System.ComponentModel.Annotations.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.246</Modified>
+      <Modified>2015-11-03T15:56:05.038</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ComponentModel.DataAnnotations.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ComponentModel.DataAnnotations.dll">
       <PackagePath>System.ComponentModel.DataAnnotations.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.247</Modified>
+      <Modified>2015-11-03T15:56:02.942</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ComponentModel.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ComponentModel.dll">
       <PackagePath>System.ComponentModel.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.249</Modified>
+      <Modified>2015-11-03T15:56:04.482</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ComponentModel.EventBasedAsync.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ComponentModel.EventBasedAsync.dll">
       <PackagePath>System.ComponentModel.EventBasedAsync.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.250</Modified>
+      <Modified>2015-11-03T15:56:00.965</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Core.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Core.dll">
       <PackagePath>System.Core.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.251</Modified>
+      <Modified>2015-11-03T15:56:02.995</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Data.Common.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Data.Common.dll">
       <PackagePath>System.Data.Common.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.491</Modified>
+      <Modified>2015-11-03T15:56:01.022</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Diagnostics.Contracts.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Diagnostics.Contracts.dll">
       <PackagePath>System.Diagnostics.Contracts.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.493</Modified>
+      <Modified>2015-11-03T15:56:01.160</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Diagnostics.Debug.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Diagnostics.Debug.dll">
       <PackagePath>System.Diagnostics.Debug.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.494</Modified>
+      <Modified>2015-11-03T15:56:04.516</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Diagnostics.StackTrace.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Diagnostics.StackTrace.dll">
       <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.495</Modified>
+      <Modified>2015-11-03T15:56:01.073</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Diagnostics.Tools.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Diagnostics.Tools.dll">
       <PackagePath>System.Diagnostics.Tools.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.496</Modified>
+      <Modified>2015-11-03T15:56:04.831</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Diagnostics.Tracing.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Diagnostics.Tracing.dll">
       <PackagePath>System.Diagnostics.Tracing.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.497</Modified>
+      <Modified>2015-11-03T15:56:05.202</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.dll">
       <PackagePath>System.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.499</Modified>
+      <Modified>2015-11-03T15:56:03.024</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Dynamic.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Dynamic.Runtime.dll">
       <PackagePath>System.Dynamic.Runtime.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.502</Modified>
+      <Modified>2015-11-03T15:56:05.168</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Globalization.Calendars.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Globalization.Calendars.dll">
       <PackagePath>System.Globalization.Calendars.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.503</Modified>
+      <Modified>2015-11-03T15:56:05.150</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Globalization.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Globalization.dll">
       <PackagePath>System.Globalization.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.505</Modified>
+      <Modified>2015-11-03T15:56:05.147</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Globalization.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Globalization.Extensions.dll">
       <PackagePath>System.Globalization.Extensions.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.506</Modified>
+      <Modified>2015-11-03T15:56:05.234</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.IO.Compression.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.IO.Compression.dll">
       <PackagePath>System.IO.Compression.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.509</Modified>
+      <Modified>2015-11-03T15:56:05.459</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.IO.Compression.ZipFile.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.IO.Compression.ZipFile.dll">
       <PackagePath>System.IO.Compression.ZipFile.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.510</Modified>
+      <Modified>2015-11-03T15:56:05.409</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.IO.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.IO.dll">
       <PackagePath>System.IO.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.512</Modified>
+      <Modified>2015-11-03T15:56:05.323</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.IO.FileSystem.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.IO.FileSystem.dll">
       <PackagePath>System.IO.FileSystem.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.515</Modified>
+      <Modified>2015-11-03T15:56:05.567</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.IO.FileSystem.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.IO.FileSystem.Primitives.dll">
       <PackagePath>System.IO.FileSystem.Primitives.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.613</Modified>
+      <Modified>2015-11-03T15:56:05.447</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.IO.IsolatedStorage.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.IO.IsolatedStorage.dll">
       <PackagePath>System.IO.IsolatedStorage.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.615</Modified>
+      <Modified>2015-11-03T15:56:01.020</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.IO.UnmanagedMemoryStream.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.IO.UnmanagedMemoryStream.dll">
       <PackagePath>System.IO.UnmanagedMemoryStream.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.618</Modified>
+      <Modified>2015-11-03T15:56:05.611</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Linq.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Linq.dll">
       <PackagePath>System.Linq.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.621</Modified>
+      <Modified>2015-11-03T15:56:05.595</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Linq.Expressions.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Linq.Expressions.dll">
       <PackagePath>System.Linq.Expressions.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.759</Modified>
+      <Modified>2015-11-03T15:56:05.754</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Linq.Parallel.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Linq.Parallel.dll">
       <PackagePath>System.Linq.Parallel.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.764</Modified>
+      <Modified>2015-11-03T15:56:05.700</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Linq.Queryable.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Linq.Queryable.dll">
       <PackagePath>System.Linq.Queryable.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.766</Modified>
+      <Modified>2015-11-03T15:56:06.704</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Net.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Net.dll">
       <PackagePath>System.Net.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.767</Modified>
+      <Modified>2015-11-03T15:56:03.036</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Net.Http.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Net.Http.dll">
       <PackagePath>System.Net.Http.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.771</Modified>
+      <Modified>2015-11-03T15:56:05.888</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Net.Http.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
-      <Modified>2015-11-20T02:43:02.020</Modified>
+      <Modified>2015-11-24T18:04:41.157</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Net.Http.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
-      <Modified>2015-11-20T02:43:02.002</Modified>
+      <Modified>2015-11-24T18:04:41.134</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Net.Http.Rtc.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Net.Http.Rtc.dll">
       <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.773</Modified>
+      <Modified>2015-11-03T15:56:00.964</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Net.NetworkInformation.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Net.NetworkInformation.dll">
       <PackagePath>System.Net.NetworkInformation.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.774</Modified>
+      <Modified>2015-11-03T15:56:05.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Net.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Net.Primitives.dll">
       <PackagePath>System.Net.Primitives.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.775</Modified>
+      <Modified>2015-11-03T15:56:06.649</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Net.Requests.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Net.Requests.dll">
       <PackagePath>System.Net.Requests.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.777</Modified>
+      <Modified>2015-11-03T15:56:01.042</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Net.Sockets.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Net.Sockets.dll">
       <PackagePath>System.Net.Sockets.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.778</Modified>
+      <Modified>2015-11-03T15:56:02.954</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Net.WebHeaderCollection.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Net.WebHeaderCollection.dll">
       <PackagePath>System.Net.WebHeaderCollection.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.780</Modified>
+      <Modified>2015-11-03T15:56:02.946</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Numerics.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Numerics.dll">
       <PackagePath>System.Numerics.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.978</Modified>
+      <Modified>2015-11-03T15:56:03.053</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Numerics.Vectors.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Numerics.Vectors.dll">
       <PackagePath>System.Numerics.Vectors.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.982</Modified>
+      <Modified>2015-11-03T15:56:06.646</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Numerics.Vectors.WindowsRuntime.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Numerics.Vectors.WindowsRuntime.dll">
       <PackagePath>System.Numerics.Vectors.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.984</Modified>
+      <Modified>2015-11-03T15:56:03.108</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ObjectModel.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ObjectModel.dll">
       <PackagePath>System.ObjectModel.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.985</Modified>
+      <Modified>2015-11-03T15:56:06.625</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Private.DataContractSerialization.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Private.DataContractSerialization.dll">
       <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
-      <Modified>2015-11-20T22:41:21.995</Modified>
+      <Modified>2015-11-03T15:56:01.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Private.Networking.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Private.Networking.dll">
       <PackagePath>System.Private.Networking.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.001</Modified>
+      <Modified>2015-11-03T15:56:01.058</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Private.ServiceModel.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Private.ServiceModel.dll">
       <PackagePath>System.Private.ServiceModel.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.030</Modified>
+      <Modified>2015-11-03T15:56:03.256</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Private.Uri.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Private.Uri.dll">
       <PackagePath>System.Private.Uri.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.033</Modified>
+      <Modified>2015-11-03T15:55:59.864</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Reflection.Context.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Reflection.Context.dll">
       <PackagePath>System.Reflection.Context.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.035</Modified>
+      <Modified>2015-11-03T15:56:03.012</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Reflection.DispatchProxy.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Reflection.DispatchProxy.dll">
       <PackagePath>System.Reflection.DispatchProxy.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.036</Modified>
+      <Modified>2015-11-03T15:56:06.660</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Reflection.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Reflection.dll">
       <PackagePath>System.Reflection.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.037</Modified>
+      <Modified>2015-11-03T15:56:06.683</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Reflection.Emit.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Reflection.Emit.dll">
       <PackagePath>System.Reflection.Emit.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.040</Modified>
+      <Modified>2015-11-03T15:56:14.061</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Reflection.Emit.ILGeneration.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Reflection.Emit.ILGeneration.dll">
       <PackagePath>System.Reflection.Emit.ILGeneration.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.040</Modified>
+      <Modified>2015-11-03T15:56:13.959</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Reflection.Emit.Lightweight.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Reflection.Emit.Lightweight.dll">
       <PackagePath>System.Reflection.Emit.Lightweight.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.041</Modified>
+      <Modified>2015-11-03T15:56:13.870</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Reflection.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Reflection.Extensions.dll">
       <PackagePath>System.Reflection.Extensions.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.255</Modified>
+      <Modified>2015-11-03T15:56:06.725</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Reflection.Metadata.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Reflection.Metadata.dll">
       <PackagePath>System.Reflection.Metadata.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.259</Modified>
+      <Modified>2015-11-03T15:56:06.721</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Reflection.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Reflection.Primitives.dll">
       <PackagePath>System.Reflection.Primitives.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.261</Modified>
+      <Modified>2015-11-03T15:56:06.707</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Reflection.TypeExtensions.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Reflection.TypeExtensions.dll">
       <PackagePath>System.Reflection.TypeExtensions.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.262</Modified>
+      <Modified>2015-11-03T15:56:06.771</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Resources.ResourceManager.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Resources.ResourceManager.dll">
       <PackagePath>System.Resources.ResourceManager.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.263</Modified>
+      <Modified>2015-11-03T15:56:06.763</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.265</Modified>
+      <Modified>2015-11-03T15:56:10.023</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.Extensions.dll">
       <PackagePath>System.Runtime.Extensions.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.266</Modified>
+      <Modified>2015-11-03T15:56:10.010</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.Handles.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.Handles.dll">
       <PackagePath>System.Runtime.Handles.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.267</Modified>
+      <Modified>2015-11-03T15:56:10.039</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.InteropServices.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.InteropServices.dll">
       <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.269</Modified>
+      <Modified>2015-11-03T15:56:10.177</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.InteropServices.WindowsRuntime.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.InteropServices.WindowsRuntime.dll">
       <PackagePath>System.Runtime.InteropServices.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.270</Modified>
+      <Modified>2015-11-03T15:56:03.465</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.Numerics.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.Numerics.dll">
       <PackagePath>System.Runtime.Numerics.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.272</Modified>
+      <Modified>2015-11-03T15:56:10.162</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.Serialization.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.Serialization.dll">
       <PackagePath>System.Runtime.Serialization.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.273</Modified>
+      <Modified>2015-11-03T15:56:03.070</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.Serialization.Json.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.Serialization.Json.dll">
       <PackagePath>System.Runtime.Serialization.Json.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.274</Modified>
+      <Modified>2015-11-03T15:56:03.442</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.Serialization.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.Serialization.Primitives.dll">
       <PackagePath>System.Runtime.Serialization.Primitives.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.275</Modified>
+      <Modified>2015-11-03T15:56:03.540</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.Serialization.Xml.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.Serialization.Xml.dll">
       <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.277</Modified>
+      <Modified>2015-11-03T15:56:03.806</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.dll">
       <PackagePath>System.Runtime.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.280</Modified>
+      <Modified>2015-11-03T15:56:03.721</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.UI.Xaml.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.UI.Xaml.dll">
       <PackagePath>System.Runtime.WindowsRuntime.UI.Xaml.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.282</Modified>
+      <Modified>2015-11-03T15:56:03.628</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Security.Claims.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Security.Claims.dll">
       <PackagePath>System.Security.Claims.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.284</Modified>
+      <Modified>2015-11-03T15:56:10.466</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Security.Principal.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Security.Principal.dll">
       <PackagePath>System.Security.Principal.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.286</Modified>
+      <Modified>2015-11-03T15:56:10.543</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ServiceModel.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ServiceModel.dll">
       <PackagePath>System.ServiceModel.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.287</Modified>
+      <Modified>2015-11-03T15:56:03.082</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ServiceModel.Duplex.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ServiceModel.Duplex.dll">
       <PackagePath>System.ServiceModel.Duplex.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.288</Modified>
+      <Modified>2015-11-03T15:56:03.678</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ServiceModel.Http.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ServiceModel.Http.dll">
       <PackagePath>System.ServiceModel.Http.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.289</Modified>
+      <Modified>2015-11-03T15:56:03.690</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ServiceModel.NetTcp.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ServiceModel.NetTcp.dll">
       <PackagePath>System.ServiceModel.NetTcp.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.290</Modified>
+      <Modified>2015-11-03T15:56:03.802</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ServiceModel.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ServiceModel.Primitives.dll">
       <PackagePath>System.ServiceModel.Primitives.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.291</Modified>
+      <Modified>2015-11-03T15:56:03.927</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ServiceModel.Security.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ServiceModel.Security.dll">
       <PackagePath>System.ServiceModel.Security.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.292</Modified>
+      <Modified>2015-11-03T15:56:03.771</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.ServiceModel.Web.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.ServiceModel.Web.dll">
       <PackagePath>System.ServiceModel.Web.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.293</Modified>
+      <Modified>2015-11-03T15:56:03.093</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Text.Encoding.CodePages.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.303</Modified>
+      <Modified>2015-11-03T15:56:04.019</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Text.Encoding.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Text.Encoding.dll">
       <PackagePath>System.Text.Encoding.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.304</Modified>
+      <Modified>2015-11-03T15:56:10.650</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Text.Encoding.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Text.Encoding.Extensions.dll">
       <PackagePath>System.Text.Encoding.Extensions.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.858</Modified>
+      <Modified>2015-11-03T15:56:10.603</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Text.RegularExpressions.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Text.RegularExpressions.dll">
       <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.861</Modified>
+      <Modified>2015-11-03T15:56:10.686</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Threading.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Threading.dll">
       <PackagePath>System.Threading.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.863</Modified>
+      <Modified>2015-11-03T15:56:10.936</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Threading.Overlapped.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Threading.Overlapped.dll">
       <PackagePath>System.Threading.Overlapped.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.864</Modified>
+      <Modified>2015-11-03T15:55:59.668</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Threading.Tasks.Dataflow.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Threading.Tasks.Dataflow.dll">
       <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.867</Modified>
+      <Modified>2015-11-03T15:56:10.833</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Threading.Tasks.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Threading.Tasks.dll">
       <PackagePath>System.Threading.Tasks.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.869</Modified>
+      <Modified>2015-11-03T15:56:10.679</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Threading.Tasks.Parallel.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Threading.Tasks.Parallel.dll">
       <PackagePath>System.Threading.Tasks.Parallel.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.870</Modified>
+      <Modified>2015-11-03T15:56:10.797</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Threading.Timer.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Threading.Timer.dll">
       <PackagePath>System.Threading.Timer.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.871</Modified>
+      <Modified>2015-11-03T15:56:10.897</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Windows.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Windows.dll">
       <PackagePath>System.Windows.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.872</Modified>
+      <Modified>2015-11-03T15:56:03.122</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Xml.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Xml.dll">
       <PackagePath>System.Xml.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.874</Modified>
+      <Modified>2015-11-03T15:56:03.154</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Xml.Linq.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Xml.Linq.dll">
       <PackagePath>System.Xml.Linq.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.875</Modified>
+      <Modified>2015-11-03T15:56:03.241</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Xml.ReaderWriter.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Xml.ReaderWriter.dll">
       <PackagePath>System.Xml.ReaderWriter.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.879</Modified>
+      <Modified>2015-11-03T15:56:11.149</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Xml.Serialization.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Xml.Serialization.dll">
       <PackagePath>System.Xml.Serialization.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.880</Modified>
+      <Modified>2015-11-03T15:56:03.391</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Xml.XDocument.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Xml.XDocument.dll">
       <PackagePath>System.Xml.XDocument.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.883</Modified>
+      <Modified>2015-11-03T15:56:11.108</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Xml.XmlDocument.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Xml.XmlDocument.dll">
       <PackagePath>System.Xml.XmlDocument.dll</PackagePath>
-      <Modified>2015-11-20T22:41:22.885</Modified>
+      <Modified>2015-11-03T15:55:59.923</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\System.Xml.XmlSerializer.dll">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
-      <Modified>2015-11-20T22:41:23.382</Modified>
+      <Modified>2015-11-03T15:56:04.881</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\Core\WinMetadata\Windows.winmd">
+    <AppxPackagedFile Include="C:\Users\s2bdev\Source\Repos\SGF\SGF\bin\x86\Debug\Core\WinMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2015-11-20T22:41:23.422</Modified>
+      <Modified>2015-10-22T15:46:39.520</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace SGF.Model
 {
-	class TurmaDisciplina
+	public class TurmaDisciplina
 	{
 		public string Id { get; set; }
 
-		public Turma Turma { get; set; }
-	
-		public Disciplina Disciplina { get; set; }
+        public string TurmaId { get; set; }
+        public Turma Turma { get; set; }
 
-		public Professor Professor { get; set; }
+        public string DisciplinaId { get; set; }
+        public Disciplina Disciplina { get; set; }
+
+        public string ProfessorId { get; set; }
+        public Professor Professor { get; set; }
 		
 	}
 }

@@ -40,8 +40,8 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Stretch" VerticalAlignment="top" />
-                <Button Grid.Column="2" x:Name="btnLogin" Content="Logar" HorizontalAlignment="Stretch" VerticalAlignment="top" Click="btnLogin_Click" />
+                <Button Grid.Column="0" Style="{StaticResource buttonLogin}" x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Stretch" VerticalAlignment="top" />
+                <Button Grid.Column="2" Style="{StaticResource buttonLogin}" x:Name="btnLogin" Content="Logar" HorizontalAlignment="Stretch" VerticalAlignment="top" Click="btnLogin_Click" />
             </Grid>
         </StackPanel>        
     </Grid>

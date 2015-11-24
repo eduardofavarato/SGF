@@ -1,1 +1,1 @@
-C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\SGF.csproj;x86
+C:\Users\s2bdev\Source\Repos\SGF\SGF\SGF.csproj;x86

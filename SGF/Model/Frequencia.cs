@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace SGF.Model
 {
-	class Frequencia
+	public class Frequencia
 	{
 		public string Id { get; set; }
 
-		public TurmaDisciplina TurmaDisciplina { get; set; }
+        public string TurmaDisciplinaId { get; set; }
+        public TurmaDisciplina TurmaDisciplina { get; set; }
 
-		public Aluno Aluno { get; set; }
+        public string AlunoId { get; set; }
+        public Aluno Aluno { get; set; }
 	}
 }

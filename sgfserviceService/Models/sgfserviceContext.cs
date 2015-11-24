@@ -40,21 +40,13 @@ namespace sgfserviceService.Models
 
 		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Usuario> Usuarios { get; set; }
 
-		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Responsavel> Responsaveis { get; set; }
-
-		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Professor> Professores { get; set; }
-
-	    public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Aluno> Alunos { get; set; }
+		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Professor> Professors { get; set; }
 
 		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Admin> Admins { get; set; }
 
 		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Turma> Turmas { get; set; }
 
 		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Serie> Series { get; set; }
-
-		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.ResponsavelAluno> ResponsaveisAlunos { get; set; }
-
-		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Aviso> Avisos { get; set; }
 
 		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Disciplina> Disciplinas { get; set; }
 
@@ -64,7 +56,15 @@ namespace sgfserviceService.Models
 
 		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Aula> Aulas { get; set; }
 
-		public System.Data.Entity.DbSet<sgfserviceService.DataObjects.TurmaDisciplina> TurmasDisciplinas { get; set; }
-	}
+        public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Aluno> Alunoes { get; set; }
+
+        public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Aviso> Avisoes { get; set; }
+
+        public System.Data.Entity.DbSet<sgfserviceService.DataObjects.Responsavel> Responsavels { get; set; }
+
+        public System.Data.Entity.DbSet<sgfserviceService.DataObjects.ResponsavelAluno> ResponsavelAlunoes { get; set; }
+
+        public System.Data.Entity.DbSet<sgfserviceService.DataObjects.TurmaDisciplina> TurmaDisciplinas { get; set; }
+    }
 
 }

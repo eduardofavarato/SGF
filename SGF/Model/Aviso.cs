@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace SGF.Model
 {
-	class Aviso
+	public class Aviso
 	{
 		public string Id { get; set; }
 
-		public TurmaDisciplina TurmaDisciplina { get; set; }
+        public string TurmaDisciplinaId { get; set; }
+        public TurmaDisciplina TurmaDisciplina { get; set; }
 	}
 }

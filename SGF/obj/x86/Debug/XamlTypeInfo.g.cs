@@ -132,25 +132,17 @@ namespace SGF.SGF_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[8];
-            _typeNameTable[0] = "SGF.Admin";
+            _typeNameTable = new string[4];
+            _typeNameTable[0] = "SGF.Login";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "String";
-            _typeNameTable[4] = "SGF.Model.Usuario";
-            _typeNameTable[5] = "Object";
-            _typeNameTable[6] = "SGF.Login";
-            _typeNameTable[7] = "SGF.Splash";
+            _typeNameTable[3] = "SGF.Splash";
 
-            _typeTable = new global::System.Type[8];
-            _typeTable[0] = typeof(global::SGF.Admin);
+            _typeTable = new global::System.Type[4];
+            _typeTable[0] = typeof(global::SGF.Login);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::System.String);
-            _typeTable[4] = typeof(global::SGF.Model.Usuario);
-            _typeTable[5] = typeof(global::System.Object);
-            _typeTable[6] = typeof(global::SGF.Login);
-            _typeTable[7] = typeof(global::SGF.Splash);
+            _typeTable[3] = typeof(global::SGF.Splash);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -185,10 +177,8 @@ namespace SGF.SGF_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_Admin() { return new global::SGF.Admin(); }
-        private object Activate_4_Usuario() { return new global::SGF.Model.Usuario(); }
-        private object Activate_6_Login() { return new global::SGF.Login(); }
-        private object Activate_7_Splash() { return new global::SGF.Splash(); }
+        private object Activate_0_Login() { return new global::SGF.Login(); }
+        private object Activate_3_Splash() { return new global::SGF.Splash(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -200,11 +190,9 @@ namespace SGF.SGF_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  SGF.Admin
+            case 0:   //  SGF.Login
                 userType = new global::SGF.SGF_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_Admin;
-                userType.AddMemberName("Matricula");
-                userType.AddMemberName("Usuario");
+                userType.Activator = Activate_0_Login;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -217,31 +205,9 @@ namespace SGF.SGF_XamlTypeInfo
                 xamlType = new global::SGF.SGF_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  String
-                xamlType = new global::SGF.SGF_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 4:   //  SGF.Model.Usuario
-                userType = new global::SGF.SGF_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 5:   //  Object
-                xamlType = new global::SGF.SGF_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 6:   //  SGF.Login
+            case 3:   //  SGF.Splash
                 userType = new global::SGF.SGF_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_Login;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 7:   //  SGF.Splash
-                userType = new global::SGF.SGF_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_Splash;
+                userType.Activator = Activate_3_Splash;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -250,37 +216,11 @@ namespace SGF.SGF_XamlTypeInfo
         }
 
 
-        private object get_0_Admin_Matricula(object instance)
-        {
-            var that = (global::SGF.Admin)instance;
-            return that.Matricula;
-        }
-        private object get_1_Admin_Usuario(object instance)
-        {
-            var that = (global::SGF.Admin)instance;
-            return that.Usuario;
-        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::SGF.SGF_XamlTypeInfo.XamlMember xamlMember = null;
-            global::SGF.SGF_XamlTypeInfo.XamlUserType userType;
-
-            switch (longMemberName)
-            {
-            case "SGF.Admin.Matricula":
-                userType = (global::SGF.SGF_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SGF.Admin");
-                xamlMember = new global::SGF.SGF_XamlTypeInfo.XamlMember(this, "Matricula", "String");
-                xamlMember.Getter = get_0_Admin_Matricula;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "SGF.Admin.Usuario":
-                userType = (global::SGF.SGF_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SGF.Admin");
-                xamlMember = new global::SGF.SGF_XamlTypeInfo.XamlMember(this, "Usuario", "SGF.Model.Usuario");
-                xamlMember.Getter = get_1_Admin_Usuario;
-                xamlMember.SetIsReadOnly();
-                break;
-            }
+            // No Local Properties
             return xamlMember;
         }
     }
