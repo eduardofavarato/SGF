@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.ApplicationModel;
 using Windows.Storage;
 
 namespace SGF.Class
 {
-    class Conexao
+    class DBConexao
     {
         private SQLiteConnection conexao;
 
@@ -18,7 +19,7 @@ namespace SGF.Class
             set { conexao = value; }
         }
 
-        public Conexao()
+        public DBConexao()
         {
             this.Conexao = new SQLiteConnection("SGF.db");
         }

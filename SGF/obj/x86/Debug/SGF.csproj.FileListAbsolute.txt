@@ -1857,3 +1857,8 @@ C:\Users\s2bdev\Source\Repos\SGF\SGF\obj\x86\Debug\Core\Properties\Default.rd.xm
 C:\Users\s2bdev\Source\Repos\SGF\SGF\obj\x86\Debug\Core\SGF.xr.xml
 C:\Users\s2bdev\Source\Repos\SGF\SGF\obj\x86\Debug\Core\resources.pri
 C:\Users\s2bdev\Source\Repos\SGF\SGF\obj\x86\Debug\SGF.csprojResolveAssemblyReference.cache
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\bin\x86\Debug\View\ViewAdmin.xbf
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\View\ViewAdmin.g.i.cs
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\View\ViewAdmin.g.cs
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\View\ViewAdmin.xaml
+C:\Users\prica_000\Documents\Visual Studio 2015\Projects\ProjetoS2B\SGF\obj\x86\Debug\View\ViewAdmin.xbf
