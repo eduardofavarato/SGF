@@ -40,25 +40,39 @@ namespace SGF
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            processaLogin(textBox_Usuario.Text, textBox_Senha.Text);
-            salvarConfiguracao();
+            processaLogin(textBox_Usuario.Text, textBox_Senha.Text);            
+        }
+
+        private async void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            var messageDialog = new MessageDialog("Desejar realmente fechar o SGF ?");
+            messageDialog.Commands.Add(new UICommand("Sim", (command) =>
+            {
+                Window.Current.Close();
+            }));
+            messageDialog.Commands.Add(new UICommand("Não", null));
+            messageDialog.DefaultCommandIndex = 1;
+
+            await messageDialog.ShowAsync();
         }
 
         private async void processaLogin(string login, string senha)
         {
-            bool acesso = await databaseMethods.checkLogin(login, senha);
-            if (acesso)
+            bool acesso = false;
+
+            if (login != "" && senha != "")
             {
-                var dialog = new MessageDialog("Acesso Garantido!");
-                await dialog.ShowAsync();
+                if (!(acesso = await databaseMethods.checkLogin(login, senha)))
+                {
+                    salvarConfiguracao();
+                    await new MessageDialog("Acesso Negado!").ShowAsync();
+                }
             }
             else
             {
-                var dialog = new MessageDialog("Acesso Negado!");
-                await dialog.ShowAsync();
+                await new MessageDialog("Por Favor Preencha todos os campos!").ShowAsync();
             }
         }
-
 
         private void salvarConfiguracao()
         {
