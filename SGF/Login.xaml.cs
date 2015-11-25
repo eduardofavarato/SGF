@@ -58,14 +58,17 @@ namespace SGF
 
         private async void processaLogin(string login, string senha)
         {
-            bool acesso = false;
-
-            if (login != "" && senha != "")
+              if (login != "" && senha != "")
             {
-                if (!(acesso = await databaseMethods.checkLogin(login, senha)))
+                if (!await databaseMethods.checkLogin(login, senha))
                 {
-                    salvarConfiguracao();
+                    
                     await new MessageDialog("Acesso Negado!").ShowAsync();
+                }
+                else
+                {
+                    await new MessageDialog("Bem Vindo!").ShowAsync();
+                    salvarConfiguracao();
                 }
             }
             else

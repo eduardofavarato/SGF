@@ -334,7 +334,7 @@ namespace SGF
         public static async Task<bool> checkLogin(string login, string senha)
         {
             List<Usuario> usuarios = await App.MobileService.GetTable<Usuario>().Where(x => x.Login == login && x.Senha == senha).ToListAsync();
-            return (usuarios.Count > 0);
+            return (usuarios.Count == 1);
         }
         #endregion
 
