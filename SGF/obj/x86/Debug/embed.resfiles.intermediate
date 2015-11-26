@@ -3,3 +3,6 @@ Login.xbf
 Splash.xbf
 Style\Style.xbf
 View\ViewAdmin.xbf
+View\ViewAluno.xbf
+View\ViewCadastro\ViewCadProfessor.xbf
+View\ViewProfessor.xbf

@@ -23,7 +23,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnCadProf" Grid.Column="1" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Button x:Name="btnCadProf" Grid.Column="1" Grid.Row="1" Margin="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnCadProf_Click">
             <Button.Content>
                 <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <FontIcon FontFamily="Segoe UI Symbol" Glyph="&#xE28F;"/>

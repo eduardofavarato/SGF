@@ -125,6 +125,15 @@
     <Compile Include="View\ViewAdmin.xaml.cs">
       <DependentUpon>ViewAdmin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ViewAluno.xaml.cs">
+      <DependentUpon>ViewAluno.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewCadastro\ViewCadProfessor.xaml.cs">
+      <DependentUpon>ViewCadProfessor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewProfessor.xaml.cs">
+      <DependentUpon>ViewProfessor.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -161,6 +170,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
     <Page Include="View\ViewAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewAluno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewCadastro\ViewCadProfessor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewProfessor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

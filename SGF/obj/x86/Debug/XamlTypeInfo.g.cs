@@ -132,19 +132,25 @@ namespace SGF.SGF_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
+            _typeNameTable = new string[8];
             _typeNameTable[0] = "SGF.Login";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "SGF.Splash";
             _typeNameTable[4] = "SGF.View.ViewAdmin";
+            _typeNameTable[5] = "SGF.View.ViewAluno";
+            _typeNameTable[6] = "SGF.View.ViewCadastro.ViewCadProfessor";
+            _typeNameTable[7] = "SGF.View.ViewProfessor";
 
-            _typeTable = new global::System.Type[5];
+            _typeTable = new global::System.Type[8];
             _typeTable[0] = typeof(global::SGF.Login);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::SGF.Splash);
             _typeTable[4] = typeof(global::SGF.View.ViewAdmin);
+            _typeTable[5] = typeof(global::SGF.View.ViewAluno);
+            _typeTable[6] = typeof(global::SGF.View.ViewCadastro.ViewCadProfessor);
+            _typeTable[7] = typeof(global::SGF.View.ViewProfessor);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -182,6 +188,9 @@ namespace SGF.SGF_XamlTypeInfo
         private object Activate_0_Login() { return new global::SGF.Login(); }
         private object Activate_3_Splash() { return new global::SGF.Splash(); }
         private object Activate_4_ViewAdmin() { return new global::SGF.View.ViewAdmin(); }
+        private object Activate_5_ViewAluno() { return new global::SGF.View.ViewAluno(); }
+        private object Activate_6_ViewCadProfessor() { return new global::SGF.View.ViewCadastro.ViewCadProfessor(); }
+        private object Activate_7_ViewProfessor() { return new global::SGF.View.ViewProfessor(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -218,6 +227,27 @@ namespace SGF.SGF_XamlTypeInfo
             case 4:   //  SGF.View.ViewAdmin
                 userType = new global::SGF.SGF_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_4_ViewAdmin;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  SGF.View.ViewAluno
+                userType = new global::SGF.SGF_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_ViewAluno;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  SGF.View.ViewCadastro.ViewCadProfessor
+                userType = new global::SGF.SGF_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_ViewCadProfessor;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  SGF.View.ViewProfessor
+                userType = new global::SGF.SGF_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_ViewProfessor;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

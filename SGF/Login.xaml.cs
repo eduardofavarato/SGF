@@ -40,6 +40,7 @@ namespace SGF
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            salvarConfiguracao();
             processaLogin(textBox_Usuario.Text, textBox_Senha.Text);            
         }
 
@@ -67,8 +68,8 @@ namespace SGF
                 }
                 else
                 {
-                    await new MessageDialog("Bem Vindo!").ShowAsync();
-                    salvarConfiguracao();
+                    // await new MessageDialog("Bem Vindo!").ShowAsync();                    
+                    this.Frame.Navigate(typeof(View.ViewAdmin));
                 }
             }
             else
