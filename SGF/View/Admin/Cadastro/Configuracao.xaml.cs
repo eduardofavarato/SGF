@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -15,21 +16,26 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace SGF.View
+namespace SGF.View.Admin.Cadastro
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ViewAdmin : Page
+    public sealed partial class Configuracao : Page
     {
-        public ViewAdmin()
+        public Configuracao()
         {
             this.InitializeComponent();
+            var currentView = SystemNavigationManager.GetForCurrentView();
+            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            currentView.BackRequested += backButton_Tapped;
         }
-
-        private void btnCadProf_Click(object sender, RoutedEventArgs e)
+        private void backButton_Tapped(object sender, BackRequestedEventArgs e)
         {
-            this.Frame.Navigate(typeof(View.ViewCadastro.ViewCadProfessor));
+            e.Handled = true;
+            if (Frame.CanGoBack)
+                try { Frame.GoBack(); }
+                catch (Exception) { }
         }
     }
 }

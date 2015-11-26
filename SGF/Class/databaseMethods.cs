@@ -20,12 +20,12 @@ namespace SGF
             Admin admin = new Admin { Matricula = matricula, UsuarioId = usuario.Id };
             await App.MobileService.GetTable<Admin>().InsertAsync(admin);
         }
-        public static async void insertAluno(string login, string nome, string senha, string matricula, Turma turma)
+        public static async void insertAluno(string login, string nome, string senha, string matricula, string turmaId)
         {
             Usuario usuario = new Usuario() { Login = login, Nome = nome, Senha = senha };
             await App.MobileService.GetTable<Usuario>().InsertAsync(usuario);
 
-            Aluno aluno = new Aluno { Matricula = matricula, UsuarioId = usuario.Id, TurmaId = turma.Id };
+            Aluno aluno = new Aluno { Matricula = matricula, UsuarioId = usuario.Id, TurmaId = turmaId };
             await App.MobileService.GetTable<Aluno>().InsertAsync(aluno);
         }
         public static async void insertProfessor(string login, string nome, string senha, string matricula)
@@ -44,14 +44,14 @@ namespace SGF
             Responsavel responsavel = new Responsavel { UsuarioId = usuario.Id };
             await App.MobileService.GetTable<Responsavel>().InsertAsync(responsavel);
         }
-        public static async void insertAula(bool presenca, Frequencia frequencia)
+        public static async void insertAula(bool presenca, string frequenciaId)
         {
-            Aula aula = new Aula { Presenca = presenca, FrequenciaId = frequencia.Id };
+            Aula aula = new Aula { Presenca = presenca, FrequenciaId = frequenciaId };
             await App.MobileService.GetTable<Aula>().InsertAsync(aula);
         }
-        public static async void insertAviso(TurmaDisciplina turmaDisciplina)
+        public static async void insertAviso(string turmaDisciplinaId)
         {
-            Aviso aviso = new Aviso { TurmaDisciplinaId = turmaDisciplina.Id };
+            Aviso aviso = new Aviso { TurmaDisciplinaId = turmaDisciplinaId };
             await App.MobileService.GetTable<Aviso>().InsertAsync(aviso);
         }
         public static async void insertDisciplina(string nome)
@@ -59,19 +59,19 @@ namespace SGF
             Disciplina disciplina = new Disciplina { Nome = nome };
             await App.MobileService.GetTable<Disciplina>().InsertAsync(disciplina);
         }
-        public static async void insertFrequencia(Aluno aluno, TurmaDisciplina turmaDisciplina)
+        public static async void insertFrequencia(string alunoId, string turmaDisciplinaId)
         {
-            Frequencia frequencia = new Frequencia { AlunoId = aluno.Id, TurmaDisciplinaId = turmaDisciplina.Id };
+            Frequencia frequencia = new Frequencia { AlunoId = alunoId, TurmaDisciplinaId = turmaDisciplinaId };
             await App.MobileService.GetTable<Frequencia>().InsertAsync(frequencia);
         }
-        public static async void insertNota(float VA1, float VA2, float VA3, Aluno aluno, TurmaDisciplina turmaDisciplina)
+        public static async void insertNota(float VA1, float VA2, float VA3, string alunoId, string turmaDisciplinaId)
         {
-            Nota nota = new Nota { VA1 = VA1, VA2 = VA2, VA3 = VA3, AlunoId = aluno.Id, TurmaDisciplinaId = turmaDisciplina.Id };
+            Nota nota = new Nota { VA1 = VA1, VA2 = VA2, VA3 = VA3, AlunoId = alunoId, TurmaDisciplinaId = turmaDisciplinaId };
             await App.MobileService.GetTable<Nota>().InsertAsync(nota);
         }
-        public static async void insertResponsavelAluno(Responsavel responsavel, Aluno aluno)
+        public static async void insertResponsavelAluno(string responsavelId, string alunoId)
         {
-            ResponsavelAluno responsavelAluno = new ResponsavelAluno { ResponsavelId = responsavel.Id, AlunoId = aluno.Id };
+            ResponsavelAluno responsavelAluno = new ResponsavelAluno { ResponsavelId = responsavelId, AlunoId = alunoId };
             await App.MobileService.GetTable<ResponsavelAluno>().InsertAsync(responsavelAluno);
         }
         public static async void insertSerie(string nome)
@@ -79,14 +79,14 @@ namespace SGF
             Serie serie = new Serie { Nome = nome };
             await App.MobileService.GetTable<Serie>().InsertAsync(serie);
         }
-        public static async void insertTurma(string nome, Serie serie)
+        public static async void insertTurma(string nome, string serieId)
         {
-            Turma turma = new Turma { Nome = nome, SerieId = serie.Id };
+            Turma turma = new Turma { Nome = nome, SerieId = serieId };
             await App.MobileService.GetTable<Turma>().InsertAsync(turma);
         }
-        public static async void insertTurmaDisciplina(Turma turma, Disciplina disciplina, Professor professor)
+        public static async void insertTurmaDisciplina(string turmaId, string disciplinaId, string professorId)
         {
-            TurmaDisciplina turmaDisciplina = new TurmaDisciplina { TurmaId = turma.Id, DisciplinaId = disciplina.Id, ProfessorId = professor.Id };
+            TurmaDisciplina turmaDisciplina = new TurmaDisciplina { TurmaId = turmaId, DisciplinaId = disciplinaId, ProfessorId = professorId };
             await App.MobileService.GetTable<TurmaDisciplina>().InsertAsync(turmaDisciplina);
         }
 
@@ -231,6 +231,13 @@ namespace SGF
             if (listView != null) listView.ItemsSource = responsavelAlunos;
             return responsavelAlunos;
         }
+        public static async Task<List<Serie>> getAllSeriesToListView(ListView listView = null)
+        {
+            IMobileServiceTable<Serie> serie = App.MobileService.GetTable<Serie>();
+            List<Serie> series = await serie.ToListAsync();
+            if (listView != null) listView.ItemsSource = series;
+            return series;
+        }
         public static async Task<List<Turma>> getAllTurmasToListView(ListView listView = null)
         {
             IMobileServiceTable<Turma> turma = App.MobileService.GetTable<Turma>();
@@ -314,6 +321,12 @@ namespace SGF
             List<ResponsavelAluno> responsavelAlunos = await App.MobileService.GetTable<ResponsavelAluno>().Where(x => x.Aluno.Matricula.Contains(matriculaAluno) && x.Aluno.Usuario.Nome.Contains(nomeAluno) && x.Responsavel.Usuario.Nome.Contains(nomeResponsavel)).ToListAsync();
             if (listView != null) listView.ItemsSource = responsavelAlunos;
             return responsavelAlunos;
+        }
+        public static async Task<List<Serie>> getAllSeriesToListViewUsingWhereClause(string nomeSerie = "", ListView listView = null)
+        {
+            List<Serie> series = await App.MobileService.GetTable<Serie>().Where(x => x.Nome.Contains(nomeSerie)).ToListAsync();
+            if (listView != null) listView.ItemsSource = series;
+            return series;
         }
         public static async Task<List<Turma>> getAllTurmasToListViewUsingWhereClause(string nomeTurma = "", string nomeSerie = "", ListView listView = null)
         {

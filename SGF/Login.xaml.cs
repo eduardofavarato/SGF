@@ -41,7 +41,7 @@ namespace SGF
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             salvarConfiguracao();
-            processaLogin(textBox_Usuario.Text, textBox_Senha.Text);            
+            processaLogin(textBox_Usuario.Text, textBox_Senha.Password);
         }
 
         private async void btnCancelar_Click(object sender, RoutedEventArgs e)
@@ -49,7 +49,7 @@ namespace SGF
             var messageDialog = new MessageDialog("Desejar realmente fechar o SGF ?");
             messageDialog.Commands.Add(new UICommand("Sim", (command) =>
             {
-                Window.Current.Close();
+                Application.Current.Exit();
             }));
             messageDialog.Commands.Add(new UICommand("Não", null));
             messageDialog.DefaultCommandIndex = 1;
@@ -63,13 +63,12 @@ namespace SGF
             {
                 if (!await databaseMethods.checkLogin(login, senha))
                 {
-                    
                     await new MessageDialog("Acesso Negado!").ShowAsync();
                 }
                 else
                 {
                     // await new MessageDialog("Bem Vindo!").ShowAsync();                    
-                    this.Frame.Navigate(typeof(View.ViewAdmin));
+                    this.Frame.Navigate(typeof(View.Admin.Admin));
                 }
             }
             else
@@ -92,6 +91,15 @@ namespace SGF
             {
                 string data = localsettings.Values["nome_usuario"].ToString();
                 textBox_Usuario.Text = data; // retornando o resultado da busca
+            }
+        }
+
+        private void textBox_Senha_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                salvarConfiguracao();
+                processaLogin(textBox_Usuario.Text, textBox_Senha.Password);
             }
         }
     }

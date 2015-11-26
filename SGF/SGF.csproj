@@ -122,17 +122,38 @@
       <DependentUpon>Splash.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\ViewAdmin.xaml.cs">
-      <DependentUpon>ViewAdmin.xaml</DependentUpon>
+    <Compile Include="View\Admin\Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewAluno.xaml.cs">
-      <DependentUpon>ViewAluno.xaml</DependentUpon>
+    <Compile Include="View\Admin\Cadastro\Aluno.xaml.cs">
+      <DependentUpon>Aluno.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewCadastro\ViewCadProfessor.xaml.cs">
-      <DependentUpon>ViewCadProfessor.xaml</DependentUpon>
+    <Compile Include="View\Admin\Cadastro\Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ViewProfessor.xaml.cs">
-      <DependentUpon>ViewProfessor.xaml</DependentUpon>
+    <Compile Include="View\Admin\Cadastro\Configuracao.xaml.cs">
+      <DependentUpon>Configuracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Cadastro\Disciplina.xaml.cs">
+      <DependentUpon>Disciplina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Cadastro\Professor.xaml.cs">
+      <DependentUpon>Professor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Cadastro\Responsavel.xaml.cs">
+      <DependentUpon>Responsavel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Cadastro\Serie.xaml.cs">
+      <DependentUpon>Serie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\Cadastro\Turma.xaml.cs">
+      <DependentUpon>Turma.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Professor\Professor.xaml.cs">
+      <DependentUpon>Professor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Responsavel\Responsavel.xaml.cs">
+      <DependentUpon>Responsavel.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -169,19 +190,47 @@
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
-    <Page Include="View\ViewAdmin.xaml">
+    <Page Include="View\Admin\Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ViewAluno.xaml">
+    <Page Include="View\Admin\Cadastro\Aluno.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ViewCadastro\ViewCadProfessor.xaml">
+    <Page Include="View\Admin\Cadastro\Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ViewProfessor.xaml">
+    <Page Include="View\Admin\Cadastro\Configuracao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Cadastro\Disciplina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Cadastro\Professor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Cadastro\Responsavel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Cadastro\Serie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\Cadastro\Turma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor\Professor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Responsavel\Responsavel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
