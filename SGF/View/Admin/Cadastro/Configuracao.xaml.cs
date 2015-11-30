@@ -28,14 +28,6 @@ namespace SGF.View.Admin.Cadastro
             this.InitializeComponent();
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
-            currentView.BackRequested += backButton_Tapped;
-        }
-        private void backButton_Tapped(object sender, BackRequestedEventArgs e)
-        {
-            e.Handled = true;
-            if (Frame.CanGoBack)
-                try { Frame.GoBack(); }
-                catch (Exception) { }
         }
     }
 }

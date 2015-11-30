@@ -26,8 +26,22 @@
         </Grid.RowDefinitions>
         <TextBlock x:Name="textBlock_cadastro" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="0" HorizontalAlignment="Center" 
                    TextWrapping="Wrap" Text="Cadastro de Series" VerticalAlignment="Center" FontWeight="Bold" FontSize="36"/>
-        <ListView x:Name="listViewSeries" DisplayMemberPath="Nome" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="1" VerticalAlignment="Stretch"/>
-        <Grid Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="50,0,0,0">
+        <ListView x:Name="listViewSeries" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Grid.Column="0" Text="{Binding Nome}" />
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            <Grid Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="50,0,0,0" DataContext="{Binding SelectedItem, ElementName=listViewSeries}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -39,7 +53,7 @@
                 <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="Nome" Style="{StaticResource defaultTextBlock}" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,3" FontSize="16"/>
-            <TextBox Grid.Row="1" Grid.ColumnSpan="3" x:Name="tbxNome" PlaceholderText="Digite o nome da série.." Margin="0,0,0,15" FontSize="16" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="1" Grid.ColumnSpan="3" Text="{Binding Nome}" x:Name="tbxNome" PlaceholderText="Digite o nome da série.." Margin="0,0,0,15" FontSize="16" VerticalAlignment="Center"/>
             <Button x:Name="btnSalvar" Grid.Column="0" Grid.Row="2" Margin="20" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnSalvar_Click" FontSize="13.333">
                 <Button.Content>
                     <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">

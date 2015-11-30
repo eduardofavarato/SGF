@@ -26,8 +26,22 @@
         </Grid.RowDefinitions>
         <TextBlock x:Name="textBlock_cadastro" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="0" HorizontalAlignment="Center" 
                    TextWrapping="Wrap" Text="Cadastro de Admins" VerticalAlignment="Center" FontWeight="Bold" FontSize="36"/>
-        <ListView x:Name="listViewAdmins" DisplayMemberPath="Nome" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="1" VerticalAlignment="Stretch"/>
-        <Grid Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="50,0,0,0">
+        <ListView x:Name="listViewAdmins" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Grid.Column="0" Text="{Binding Usuario.Nome}" />
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="50,0,0,0" DataContext="{Binding SelectedItem, ElementName=listViewAdmins}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -46,13 +60,13 @@
                 <RowDefinition Height="4*"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="Nome" Style="{StaticResource defaultTextBlock}" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,3" FontSize="16"/>
-            <TextBox Grid.Row="1" Grid.ColumnSpan="3" x:Name="tbxNome" PlaceholderText="Digite o nome do admin.." Margin="0,0,0,15" FontSize="16" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="1" Grid.ColumnSpan="3" Text="{Binding Usuario.Nome}" x:Name="tbxNome" PlaceholderText="Digite o nome do admin.." Margin="0,0,0,15" FontSize="16" VerticalAlignment="Center"/>
             <TextBlock Grid.Row="2" Grid.ColumnSpan="3" Text="Matrícula" Style="{StaticResource defaultTextBlock}" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,3" FontSize="16"/>
-            <TextBox Grid.Row="3" Grid.ColumnSpan="3" x:Name="tbxMatricula" PlaceholderText="Digite a matricula do admin.." Margin="0,0,0,15" FontSize="16" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="3" Grid.ColumnSpan="3" Text="{Binding Matricula}" x:Name="tbxMatricula" PlaceholderText="Digite a matricula do admin.." Margin="0,0,0,15" FontSize="16" VerticalAlignment="Center"/>
             <TextBlock Grid.Row="4" Grid.ColumnSpan="3" Text="Login" Style="{StaticResource defaultTextBlock}" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,3" FontSize="16"/>
-            <TextBox Grid.Row="5" Grid.ColumnSpan="3" x:Name="tbxLogin" PlaceholderText="Digite o login do admin.." Margin="0,0,0,15" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="5" Grid.ColumnSpan="3" Text="{Binding Usuario.Login}" x:Name="tbxLogin" PlaceholderText="Digite o login do admin.." Margin="0,0,0,15" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
             <TextBlock Grid.Row="6" Grid.ColumnSpan="3" Text="Senha" Style="{StaticResource defaultTextBlock}" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,3" FontSize="16"/>
-            <TextBox Grid.Row="7" Grid.ColumnSpan="3" x:Name="tbxSenha" PlaceholderText="Digite a senha do admin.." Margin="0,0,0,15" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="7" Grid.ColumnSpan="3" Text="{Binding Usuario.Senha}" x:Name="tbxSenha" PlaceholderText="Digite a senha do admin.." Margin="0,0,0,15" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
             <Button x:Name="btnSalvar" Grid.Column="0" Grid.Row="8" Margin="20" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnSalvar_Click" FontSize="13.333">
                 <Button.Content>
                     <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">

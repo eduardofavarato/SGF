@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
@@ -29,7 +30,6 @@ namespace SGF.View.Admin.Cadastro
             this.InitializeComponent();
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
-            currentView.BackRequested += backButton_Tapped;
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -39,30 +39,47 @@ namespace SGF.View.Admin.Cadastro
             }
             catch (Exception) { }
         }
-        private void backButton_Tapped(object sender, BackRequestedEventArgs e)
+
+
+        private async void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
-            e.Handled = true;
-            if (Frame.CanGoBack)
-                try { Frame.GoBack(); }
-                catch (Exception) { }
+            try
+            {
+                Model.Serie s = (Model.Serie)listViewSeries.SelectedItem;
+                s.Nome = tbxNome.Text;
+                databaseMethods.updateSerie(s);
+                await new MessageDialog("Série Atualizada Com Sucesso!").ShowAsync();
+                Frame.Navigate(typeof(Serie));
+            }
+            catch (Exception) { }
         }
-
-        private void btnSalvar_Click(object sender, RoutedEventArgs e)
+        private async void btnExcluir_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                Model.Serie s = (Model.Serie)listViewSeries.SelectedItem;
+                List<Model.Turma> turmas = await databaseMethods.getAllTurmasToListViewBySerieId(s.Id);
+                if (turmas.Count() > 0)
+                {
+                    await new MessageDialog("Existem " + turmas.Count().ToString() + " turmas nesta turma. Para excluir uma série, não devem existir turmas nela!").ShowAsync();
+                }
+                else
+                {
+                    databaseMethods.deleteSerie(s);
+                    await new MessageDialog("Série Excluída Com Sucesso!").ShowAsync();
+                    Frame.Navigate(typeof(Serie));
 
+                }
+            }
+            catch (Exception) { }
         }
-
-        private void btnExcluir_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private async void btnNovo_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                databaseMethods.insertSerie(tbxNome.Text);
+                Model.Serie serie = await databaseMethods.insertSerie(tbxNome.Text);
                 await new MessageDialog("Nova Série Inserida Com Sucesso!").ShowAsync();
+                Frame.Navigate(typeof(Serie));
             }
             catch (Exception) { }
         }

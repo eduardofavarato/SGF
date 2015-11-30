@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="SelectedItem" />
+    <RootPropertyPathName Name="Id" />
     <RootPropertyPathName Name="Nome" />
+    <RootPropertyPathName Name="Matricula" />
+    <RootPropertyPathName Name="Usuario" />
+    <RootPropertyPathName Name="Senha" />
+    <RootPropertyPathName Name="Login" />
+    <RootPropertyPathName Name="SerieId" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -20,6 +27,7 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Background" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
@@ -30,7 +38,9 @@
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
@@ -57,6 +67,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Text" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
@@ -108,30 +119,41 @@
     </RootType>
     <RootType FullName="SGF.View.Admin.Admin" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="DisplayMemberPath" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="ElementName" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="SelectedValuePath" />
       <RootProperty Name="DisplayMemberPath" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Margin" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="SelectedValue" />
       <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="SGF.View.Admin.Cadastro.Aluno" />
     <RootType FullName="SGF.View.Admin.Cadastro.Admin" />
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="SGF.View.Admin.Cadastro.Configuracao" />
     <RootType FullName="SGF.View.Admin.Cadastro.Disciplina" />
     <RootType FullName="SGF.View.Admin.Cadastro.Professor" />
     <RootType FullName="SGF.View.Admin.Cadastro.Responsavel" />
     <RootType FullName="SGF.View.Admin.Cadastro.Serie" />
     <RootType FullName="SGF.View.Admin.Cadastro.Turma" />
-    <RootType FullName="SGF.View.ViewProfessor" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="SGF.View.Professor" />
     <RootType FullName="SGF.View.Responsavel" />
   </Roots.RootTypes>
 </Roots>

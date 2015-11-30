@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
 
 namespace SGF
@@ -12,141 +13,330 @@ namespace SGF
     public class databaseMethods
     {
         #region "Inserts"
-        public static async void insertAdmin(string login, string nome, string senha, string matricula)
+        public static async Task<Admin> insertAdmin(string login, string nome, string senha, string matricula)
         {
             Usuario usuario = new Usuario() { Login = login, Nome = nome, Senha = senha };
             await App.MobileService.GetTable<Usuario>().InsertAsync(usuario);
 
             Admin admin = new Admin { Matricula = matricula, UsuarioId = usuario.Id };
             await App.MobileService.GetTable<Admin>().InsertAsync(admin);
+            return admin;
         }
-        public static async void insertAluno(string login, string nome, string senha, string matricula, string turmaId)
+        public static async Task<Aluno> insertAluno(string login, string nome, string senha, string matricula, string turmaId)
         {
             Usuario usuario = new Usuario() { Login = login, Nome = nome, Senha = senha };
             await App.MobileService.GetTable<Usuario>().InsertAsync(usuario);
 
             Aluno aluno = new Aluno { Matricula = matricula, UsuarioId = usuario.Id, TurmaId = turmaId };
             await App.MobileService.GetTable<Aluno>().InsertAsync(aluno);
+            return aluno;
         }
-        public static async void insertProfessor(string login, string nome, string senha, string matricula)
+        public static async Task<Professor> insertProfessor(string login, string nome, string senha, string matricula)
         {
             Usuario usuario = new Usuario() { Login = login, Nome = nome, Senha = senha };
             await App.MobileService.GetTable<Usuario>().InsertAsync(usuario);
 
             Professor professor = new Professor { Matricula = matricula, UsuarioId = usuario.Id };
             await App.MobileService.GetTable<Professor>().InsertAsync(professor);
+            return professor;
         }
-        public static async void insertResponsavel(string login, string nome, string senha)
+        public static async Task<Responsavel> insertResponsavel(string login, string nome, string senha)
         {
             Usuario usuario = new Usuario() { Login = login, Nome = nome, Senha = senha };
             await App.MobileService.GetTable<Usuario>().InsertAsync(usuario);
 
             Responsavel responsavel = new Responsavel { UsuarioId = usuario.Id };
             await App.MobileService.GetTable<Responsavel>().InsertAsync(responsavel);
+            return responsavel;
         }
-        public static async void insertAula(bool presenca, string frequenciaId)
+        public static async Task<Aula> insertAula(bool presenca, string frequenciaId)
         {
             Aula aula = new Aula { Presenca = presenca, FrequenciaId = frequenciaId };
             await App.MobileService.GetTable<Aula>().InsertAsync(aula);
+            return aula;
         }
-        public static async void insertAviso(string turmaDisciplinaId)
+        public static async Task<Aviso> insertAviso(string turmaDisciplinaId)
         {
             Aviso aviso = new Aviso { TurmaDisciplinaId = turmaDisciplinaId };
             await App.MobileService.GetTable<Aviso>().InsertAsync(aviso);
+            return aviso;
         }
-        public static async void insertDisciplina(string nome)
+        public static async Task<Disciplina> insertDisciplina(string nome)
         {
             Disciplina disciplina = new Disciplina { Nome = nome };
             await App.MobileService.GetTable<Disciplina>().InsertAsync(disciplina);
+            return disciplina;
         }
-        public static async void insertFrequencia(string alunoId, string turmaDisciplinaId)
+        public static async Task<Frequencia> insertFrequencia(string alunoId, string turmaDisciplinaId)
         {
             Frequencia frequencia = new Frequencia { AlunoId = alunoId, TurmaDisciplinaId = turmaDisciplinaId };
             await App.MobileService.GetTable<Frequencia>().InsertAsync(frequencia);
+            return frequencia;
         }
-        public static async void insertNota(float VA1, float VA2, float VA3, string alunoId, string turmaDisciplinaId)
+        public static async Task<Nota> insertNota(float VA1, float VA2, float VA3, string alunoId, string turmaDisciplinaId)
         {
             Nota nota = new Nota { VA1 = VA1, VA2 = VA2, VA3 = VA3, AlunoId = alunoId, TurmaDisciplinaId = turmaDisciplinaId };
             await App.MobileService.GetTable<Nota>().InsertAsync(nota);
+            return nota;
         }
-        public static async void insertResponsavelAluno(string responsavelId, string alunoId)
+        public static async Task<ResponsavelAluno> insertResponsavelAluno(string responsavelId, string alunoId)
         {
             ResponsavelAluno responsavelAluno = new ResponsavelAluno { ResponsavelId = responsavelId, AlunoId = alunoId };
             await App.MobileService.GetTable<ResponsavelAluno>().InsertAsync(responsavelAluno);
+            return responsavelAluno;
         }
-        public static async void insertSerie(string nome)
+        public static async Task<Serie> insertSerie(string nome)
         {
             Serie serie = new Serie { Nome = nome };
             await App.MobileService.GetTable<Serie>().InsertAsync(serie);
+            return serie;
         }
-        public static async void insertTurma(string nome, string serieId)
+        public static async Task<Turma> insertTurma(string nome, string serieId)
         {
             Turma turma = new Turma { Nome = nome, SerieId = serieId };
             await App.MobileService.GetTable<Turma>().InsertAsync(turma);
+            return turma;
         }
-        public static async void insertTurmaDisciplina(string turmaId, string disciplinaId, string professorId)
+        public static async Task<TurmaDisciplina> insertTurmaDisciplina(string turmaId, string disciplinaId, string professorId)
         {
             TurmaDisciplina turmaDisciplina = new TurmaDisciplina { TurmaId = turmaId, DisciplinaId = disciplinaId, ProfessorId = professorId };
             await App.MobileService.GetTable<TurmaDisciplina>().InsertAsync(turmaDisciplina);
+            return turmaDisciplina;
         }
 
         #endregion
         #region "Updates"
-        public static async void updateAdmin(Admin admin)
+        public static async void updateAdmin(Admin admin, Usuario usuario)
         {
-            await App.MobileService.GetTable<Usuario>().UpdateAsync(admin.Usuario);
+            await App.MobileService.GetTable<Usuario>().UpdateAsync(usuario);
+            admin.Usuario = null;
             await App.MobileService.GetTable<Admin>().UpdateAsync(admin);
         }
-        public static async void udpateAluno(Aluno aluno)
+        public static async void updateAlunoCompleto(Aluno aluno, Usuario usuario)
         {
-            await App.MobileService.GetTable<Usuario>().UpdateAsync(aluno.Usuario);
-            await App.MobileService.GetTable<Aluno>().UpdateAsync(aluno);
+            try
+            {
+                await App.MobileService.GetTable<Usuario>().UpdateAsync(usuario);
+                aluno.Usuario = null;
+                await App.MobileService.GetTable<Aluno>().UpdateAsync(aluno);
+
+                List<Frequencia> fs = await getAllFrequenciasToListViewByAlunoId(aluno.Id);
+                foreach (Frequencia f in fs)
+                {
+                    List<Aula> aulas = await getAllAulasToListViewByFrequenciaId(f.Id);
+                    foreach (Aula a in aulas)
+                    {
+                        await App.MobileService.GetTable<Aula>().DeleteAsync(a);
+                    }
+                    await App.MobileService.GetTable<Frequencia>().DeleteAsync(f);
+                }
+
+                List<Nota> notas = await getAllNotasToListViewByAlunoId(aluno.Id);
+                foreach (Nota n in notas)
+                {
+                    await App.MobileService.GetTable<Nota>().DeleteAsync(n);
+                }
+
+                List<TurmaDisciplina> tds = await getAllTurmaDisciplinasByTurmaId(aluno.TurmaId);
+                foreach (TurmaDisciplina td in tds)
+                {
+                    Frequencia nf = await insertFrequencia(aluno.Id, td.Id);
+                    await insertNota(0f, 0f, 0f, aluno.Id, td.Id);
+                    await insertAula(false, nf.Id);
+                    await insertAula(false, nf.Id);
+                    await insertAula(false, nf.Id);
+                    await insertAula(false, nf.Id);
+                    await insertAula(false, nf.Id);
+                }
+                
+            }
+            catch (Exception)
+            {
+                await new MessageDialog("Não foi possível atualizar este Aluno!").ShowAsync();
+            }
         }
-        public static async void updatetProfessor(Professor professor)
+        public static async void updateAlunoBasico(Aluno aluno, Usuario usuario)
         {
-            await App.MobileService.GetTable<Usuario>().UpdateAsync(professor.Usuario);
+            try
+            {
+                await App.MobileService.GetTable<Usuario>().UpdateAsync(usuario);
+                aluno.Usuario = null;
+                await App.MobileService.GetTable<Aluno>().UpdateAsync(aluno);
+            }
+            catch (Exception) { }
+        }
+        public static async void updatetProfessor(Professor professor, Usuario usuario)
+        {
+            await App.MobileService.GetTable<Usuario>().UpdateAsync(usuario);
+            professor.Usuario = null;
             await App.MobileService.GetTable<Professor>().UpdateAsync(professor);
         }
-        public static async void udpateResponsavel(Responsavel responsavel)
+        public static async void updateResponsavel(Responsavel responsavel, Usuario usuario)
         {
-            await App.MobileService.GetTable<Usuario>().UpdateAsync(responsavel.Usuario);
-            await App.MobileService.GetTable<Responsavel>().UpdateAsync(responsavel);
+            await App.MobileService.GetTable<Usuario>().UpdateAsync(usuario);
+            //responsavel.Usuario = null;
+            //await App.MobileService.GetTable<Responsavel>().UpdateAsync(responsavel);
         }
-        public static async void udpateAula(Aula aula)
+
+        public static async void updateAula(Aula aula)
         {
             await App.MobileService.GetTable<Aula>().UpdateAsync(aula);
         }
-        public static async void udpateAviso(Aviso aviso)
+        public static async void updateAviso(Aviso aviso)
         {
             await App.MobileService.GetTable<Aviso>().UpdateAsync(aviso);
         }
-        public static async void udpateDisciplina(Disciplina disciplina)
+        public static async void updateDisciplina(Disciplina disciplina)
         {
             await App.MobileService.GetTable<Disciplina>().UpdateAsync(disciplina);
         }
-        public static async void udpateFrequencia(Frequencia frequencia)
+        public static async void updateFrequencia(Frequencia frequencia)
         {
             await App.MobileService.GetTable<Frequencia>().UpdateAsync(frequencia);
         }
-        public static async void udpateNota(Nota nota)
+        public static async void updateNota(Nota nota)
         {
             await App.MobileService.GetTable<Nota>().UpdateAsync(nota);
         }
-        public static async void udpateResponsavelAluno(ResponsavelAluno responsavelAluno)
+        public static async void updateResponsavelAluno(ResponsavelAluno responsavelAluno)
         {
             await App.MobileService.GetTable<ResponsavelAluno>().UpdateAsync(responsavelAluno);
         }
-        public static async void udpateSerie(Serie serie)
+        public static async void updateSerie(Serie serie)
         {
             await App.MobileService.GetTable<Serie>().UpdateAsync(serie);
         }
-        public static async void udpateTurma(Turma turma)
+        public static async void updateTurma(Turma turma)
         {
             await App.MobileService.GetTable<Turma>().UpdateAsync(turma);
         }
-        public static async void udpateTurmaDisciplina(TurmaDisciplina turmaDisciplina)
+        public static async void updateTurmaDisciplina(TurmaDisciplina turmaDisciplina)
         {
             await App.MobileService.GetTable<TurmaDisciplina>().UpdateAsync(turmaDisciplina);
+        }
+
+        #endregion
+        #region "Deletes"
+
+        public static async void deleteAdmin(Admin a)
+        {
+            try
+            {
+                await App.MobileService.GetTable<Admin>().DeleteAsync(a);
+                await App.MobileService.GetTable<Usuario>().DeleteAsync(new Usuario() { Id = a.Usuario.Id, Login = a.Usuario.Login, Nome = a.Usuario.Nome, Senha = a.Usuario.Senha });
+            }
+            catch (Exception)
+            {
+                await new MessageDialog("Não foi possível excluir este Admin.").ShowAsync();
+            }
+        }
+        public static async void deleteResponsavel(Responsavel r)
+        {
+            try
+            {
+                List<ResponsavelAluno> ras = await getAllResponsavelAlunosByResponsavelId(r.Id);
+                foreach (ResponsavelAluno ra in ras)
+                {
+                    await App.MobileService.GetTable<ResponsavelAluno>().DeleteAsync(ra);
+                }
+                await App.MobileService.GetTable<Responsavel>().DeleteAsync(r);
+                await App.MobileService.GetTable<Usuario>().DeleteAsync(new Usuario() { Id = r.Usuario.Id, Login = r.Usuario.Login, Nome = r.Usuario.Nome, Senha = r.Usuario.Senha });
+            }
+            catch (Exception)
+            {
+                await new MessageDialog("Não foi possível excluir este Responsável.").ShowAsync();
+            }
+        }
+        public static async void deleteProfessor(Professor p)
+        {
+            try
+            {
+                List<TurmaDisciplina> tds = await getAllTurmaDisciplinasByProfessorId(p.Id);
+                foreach (TurmaDisciplina td in tds)
+                {
+                    td.ProfessorId = null;
+                    await App.MobileService.GetTable<TurmaDisciplina>().UpdateAsync(td);
+                }
+                await App.MobileService.GetTable<Professor>().DeleteAsync(p);
+                await App.MobileService.GetTable<Usuario>().DeleteAsync(new Usuario() { Id = p.Usuario.Id, Login = p.Usuario.Login, Nome = p.Usuario.Nome, Senha = p.Usuario.Senha });
+            }
+            catch (Exception)
+            {
+                await new MessageDialog("Não foi possível excluir este Professor!").ShowAsync();
+            }   
+        }
+        public static async void deleteAluno(Aluno aluno)
+        {
+            try
+            {
+                List<Frequencia> fs = await getAllFrequenciasToListViewByAlunoId(aluno.Id);
+                foreach (Frequencia f in fs)
+                {
+                    List<Aula> aulas = await getAllAulasToListViewByFrequenciaId(f.Id);
+                    foreach (Aula a in aulas)
+                    {
+                        await App.MobileService.GetTable<Aula>().DeleteAsync(a);
+                    }
+                    await App.MobileService.GetTable<Frequencia>().DeleteAsync(f);
+                }
+
+                List<Nota> notas = await getAllNotasToListViewByAlunoId(aluno.Id);
+                foreach (Nota n in notas)
+                {
+                    await App.MobileService.GetTable<Nota>().DeleteAsync(n);
+                }
+
+                List<ResponsavelAluno> ras = await getAllResponsavelAlunosByAlunoId(aluno.Id);
+                foreach (ResponsavelAluno ra in ras)
+                {
+                    await App.MobileService.GetTable<ResponsavelAluno>().DeleteAsync(ra);
+                }
+
+                await App.MobileService.GetTable<Aluno>().DeleteAsync(aluno);
+                await App.MobileService.GetTable<Usuario>().DeleteAsync(new Usuario() { Id = aluno.Usuario.Id, Login = aluno.Usuario.Login, Nome = aluno.Usuario.Nome, Senha = aluno.Usuario.Senha });
+            }
+            catch (Exception)
+            {
+                await new MessageDialog("Não foi possível excluir este Professor.").ShowAsync();
+            }
+        }
+        public static async void deleteTurma(Turma turma)
+        {
+            try
+            {
+                List<TurmaDisciplina> tds = await getAllTurmaDisciplinasByTurmaId(turma.Id);
+                foreach (TurmaDisciplina td in tds)
+                {
+                    await App.MobileService.GetTable<TurmaDisciplina>().DeleteAsync(td);
+                }
+                await App.MobileService.GetTable<Turma>().DeleteAsync(turma);
+            }
+            catch (Exception)
+            {
+                await new MessageDialog("Não foi possível excluir esta Turma!").ShowAsync();
+            }
+        }
+        public static async void deleteSerie(Serie serie)
+        {
+            try
+            {
+                await App.MobileService.GetTable<Serie>().DeleteAsync(serie);
+            }
+            catch (Exception)
+            {
+                await new MessageDialog("Não foi possível excluir esta Série!").ShowAsync();
+            }
+        }
+        public static async void deleteDisciplina(Disciplina disciplina)
+        {
+            try
+            {
+                await App.MobileService.GetTable<Disciplina>().DeleteAsync(disciplina);
+            }
+            catch (Exception)
+            {
+                await new MessageDialog("Não foi possível excluir esta Disciplina!").ShowAsync();
+            }
         }
 
         #endregion
@@ -158,6 +348,10 @@ namespace SGF
             //MobileServiceCollection<Admin, Admin> adminCollection;
             //adminCollection = await admin.ToCollectionAsync();
             List<Admin> admins = await admin.ToListAsync();
+            foreach (Admin a in admins)
+            {
+                a.Usuario = await getUsuarioById(a.UsuarioId);
+            }
             if (listView != null) listView.ItemsSource = admins;
             return admins;
         }
@@ -165,6 +359,10 @@ namespace SGF
         {
             IMobileServiceTable<Professor> professor = App.MobileService.GetTable<Professor>();
             List<Professor> professors = await professor.ToListAsync();
+            foreach (Professor a in professors)
+            {
+                a.Usuario = await getUsuarioById(a.UsuarioId);
+            }
             if (listView != null) listView.ItemsSource = professors;
             return professors;
         }
@@ -172,6 +370,10 @@ namespace SGF
         {
             IMobileServiceTable<Aluno> aluno = App.MobileService.GetTable<Aluno>();
             List<Aluno> alunos = await aluno.ToListAsync();
+            foreach (Aluno a in alunos)
+            {
+                a.Usuario = await getUsuarioById(a.UsuarioId);
+            }
             if (listView != null) listView.ItemsSource = alunos;
             return alunos;
         }
@@ -179,6 +381,10 @@ namespace SGF
         {
             IMobileServiceTable<Responsavel> responsavel = App.MobileService.GetTable<Responsavel>();
             List<Responsavel> responsaveis = await responsavel.ToListAsync();
+            foreach (Responsavel a in responsaveis)
+            {
+                a.Usuario = await getUsuarioById(a.UsuarioId);
+            }
             if (listView != null) listView.ItemsSource = responsaveis;
             return responsaveis;
         }
@@ -254,92 +460,133 @@ namespace SGF
         }
 
         #endregion
-        #region "GetAllToListViewUsingWhereClause"
+        #region "GetsById"
 
-        public static async Task<List<Admin>> getAllAdminsToListViewUsingWhereClause(string nome = "", string matricula = "", ListView listView = null)
+        public static async Task<Usuario> getUsuarioById(string id = "")
         {
-            List<Admin> admins = await App.MobileService.GetTable<Admin>().Where(x => x.Matricula.Contains(matricula) && x.Usuario.Nome.Contains(nome)).ToListAsync();
-            if (listView != null) listView.ItemsSource = admins;
-            return admins;
+            List<Usuario> usuario = await App.MobileService.GetTable<Usuario>().Where(x => x.Id == id).ToListAsync();
+            return usuario[0];
         }
-        public static async Task<List<Professor>> getAllProfessoresToListViewUsingWhereClause(string nome = "", string matricula = "", ListView listView = null)
+        public static async Task<List<TurmaDisciplina>> getAllTurmaDisciplinasByProfessorId(string idProfessor = "", ListView listView = null)
         {
-            List<Professor> professors = await App.MobileService.GetTable<Professor>().Where(x => x.Matricula.Contains(matricula) && x.Usuario.Nome.Contains(nome)).ToListAsync();
-            if (listView != null) listView.ItemsSource = professors;
-            return professors;
-        }
-        public static async Task<List<Aluno>> getAllAlunosToListViewUsingWhereClause(string nome = "", string matricula = "", ListView listView = null)
-        {
-            List<Aluno> alunos = await App.MobileService.GetTable<Aluno>().Where(x => x.Matricula.Contains(matricula) && x.Usuario.Nome.Contains(nome)).ToListAsync();
-            if (listView != null) listView.ItemsSource = alunos;
-            return alunos;
-        }
-        public static async Task<List<Responsavel>> getAllResponsaveisToListViewUsingWhereClause(string nome = "", string matricula ="", ListView listView = null)
-        {
-            List<Responsavel> responsaveis = await App.MobileService.GetTable<Responsavel>().Where(x => x.Usuario.Nome.Contains(nome)).ToListAsync();
-            if (listView != null) listView.ItemsSource = responsaveis;
-            return responsaveis;
-        }
-        public static async Task<List<Usuario>> getAllUsuariosToListViewUsingWhereClause(string nome = "", ListView listView = null)
-        {
-            List<Usuario> usuarios = await App.MobileService.GetTable<Usuario>().Where(x => x.Nome.Contains(nome)).ToListAsync();
-            if (listView != null) listView.ItemsSource = usuarios;
-            return usuarios;
-        }
-        public static async Task<List<Aula>> getAllAulasToListViewUsingWhereClause(string nome = "", string matricula = "", ListView listView = null)
-        {
-            List<Aula> aulas = await App.MobileService.GetTable<Aula>().Where(x => x.Frequencia.Aluno.Matricula.Contains(matricula) && x.Frequencia.Aluno.Usuario.Nome.Contains(nome)).ToListAsync();
-            if (listView != null) listView.ItemsSource = aulas;
-            return aulas;
-        }
-        public static async Task<List<Aviso>> getAllAvisosToListViewUsingWhereClause(string nomeDisciplina = "", string nomeTurma = "", string matriculaProfessor = "", string nomeProfessor = "", ListView listView = null)
-        {
-            List<Aviso> avisos = await App.MobileService.GetTable<Aviso>().Where(x => x.TurmaDisciplina.Disciplina.Nome.Contains(nomeDisciplina) && x.TurmaDisciplina.Turma.Nome.Contains(nomeTurma) && x.TurmaDisciplina.Professor.Matricula.Contains(matriculaProfessor) && x.TurmaDisciplina.Professor.Usuario.Nome.Contains(nomeProfessor)).ToListAsync();
-            if (listView != null) listView.ItemsSource = avisos;
-            return avisos;
-        }
-        public static async Task<List<Disciplina>> getAllDisciplinasToListViewUsingWhereClause(string nomeDisciplina = "", ListView listView = null)
-        {
-            List<Disciplina> disciplinas = await App.MobileService.GetTable<Disciplina>().Where(x => x.Nome.Contains(nomeDisciplina)).ToListAsync();
-            if (listView != null) listView.ItemsSource = disciplinas;
-            return disciplinas;
-        }
-        public static async Task<List<Frequencia>> getAllFrequenciasToListViewUsingWhereClause(string matriculaAluno = "", string nomeAluno = "", string nomeDisciplina = "", string nomeTurma = "", string matriculaProfessor = "", string nomeProfessor = "", ListView listView = null)
-        {
-            List<Frequencia> frequencias = await App.MobileService.GetTable<Frequencia>().Where(x => x.Aluno.Matricula.Contains(matriculaAluno) && x.Aluno.Usuario.Nome.Contains(nomeAluno) && x.TurmaDisciplina.Disciplina.Nome.Contains(nomeDisciplina) && x.TurmaDisciplina.Turma.Nome.Contains(nomeTurma) && x.TurmaDisciplina.Professor.Matricula.Contains(matriculaProfessor) && x.TurmaDisciplina.Professor.Usuario.Nome.Contains(nomeProfessor)).ToListAsync();
-            if (listView != null) listView.ItemsSource = frequencias;
-            return frequencias;
-        }
-        public static async Task<List<Nota>> getAllNotasToListViewUsingWhereClause(string matriculaAluno = "", string nomeAluno = "", string nomeDisciplina = "", string nomeTurma = "", string matriculaProfessor = "", string nomeProfessor = "", ListView listView = null)
-        {
-            List<Nota> notas = await App.MobileService.GetTable<Nota>().Where(x => x.Aluno.Matricula.Contains(matriculaAluno) && x.Aluno.Usuario.Nome.Contains(nomeAluno) && x.TurmaDisciplina.Disciplina.Nome.Contains(nomeDisciplina) && x.TurmaDisciplina.Turma.Nome.Contains(nomeTurma) && x.TurmaDisciplina.Professor.Matricula.Contains(matriculaProfessor) && x.TurmaDisciplina.Professor.Usuario.Nome.Contains(nomeProfessor)).ToListAsync();
-            if (listView != null) listView.ItemsSource = notas;
-            return notas;
-        }
-        public static async Task<List<ResponsavelAluno>> getAllResponsavelAlunosToListViewUsingWhereClause(string matriculaAluno = "", string nomeAluno = "", string nomeResponsavel = "", ListView listView = null)
-        {
-            List<ResponsavelAluno> responsavelAlunos = await App.MobileService.GetTable<ResponsavelAluno>().Where(x => x.Aluno.Matricula.Contains(matriculaAluno) && x.Aluno.Usuario.Nome.Contains(nomeAluno) && x.Responsavel.Usuario.Nome.Contains(nomeResponsavel)).ToListAsync();
-            if (listView != null) listView.ItemsSource = responsavelAlunos;
-            return responsavelAlunos;
-        }
-        public static async Task<List<Serie>> getAllSeriesToListViewUsingWhereClause(string nomeSerie = "", ListView listView = null)
-        {
-            List<Serie> series = await App.MobileService.GetTable<Serie>().Where(x => x.Nome.Contains(nomeSerie)).ToListAsync();
-            if (listView != null) listView.ItemsSource = series;
-            return series;
-        }
-        public static async Task<List<Turma>> getAllTurmasToListViewUsingWhereClause(string nomeTurma = "", string nomeSerie = "", ListView listView = null)
-        {
-            List<Turma> turmas = await App.MobileService.GetTable<Turma>().Where(x => x.Nome.Contains(nomeTurma) && x.Serie.Nome.Contains(nomeSerie)).ToListAsync();
-            if (listView != null) listView.ItemsSource = turmas;
-            return turmas;
-        }
-        public static async Task<List<TurmaDisciplina>> getAllTurmaDisciplinasToListViewUsingWhereClause(string nomeDisciplina = "", string nomeTurma = "", string matriculaProfessor = "", string nomeProfessor = "", ListView listView = null)
-        {
-            List<TurmaDisciplina> turmaDisciplinas = await App.MobileService.GetTable<TurmaDisciplina>().Where(x => x.Disciplina.Nome.Contains(nomeDisciplina) && x.Turma.Nome.Contains(nomeTurma) && x.Professor.Matricula.Contains(matriculaProfessor) && x.Professor.Usuario.Nome.Contains(nomeProfessor)).ToListAsync();
+            List<TurmaDisciplina> turmaDisciplinas = await App.MobileService.GetTable<TurmaDisciplina>().Where(x => x.ProfessorId == idProfessor).ToListAsync();
             if (listView != null) listView.ItemsSource = turmaDisciplinas;
             return turmaDisciplinas;
         }
+        public static async Task<List<TurmaDisciplina>> getAllTurmaDisciplinasByTurmaId(string idTurma = "", ListView listView = null)
+        {
+            List<TurmaDisciplina> turmaDisciplinas = await App.MobileService.GetTable<TurmaDisciplina>().Where(x => x.TurmaId == idTurma).ToListAsync();
+            if (listView != null) listView.ItemsSource = turmaDisciplinas;
+            return turmaDisciplinas;
+        }
+        public static async Task<List<TurmaDisciplina>> getAllTurmaDisciplinasByDisciplinaId(string idDisciplina = "", ListView listView = null)
+        {
+            List<TurmaDisciplina> turmaDisciplinas = await App.MobileService.GetTable<TurmaDisciplina>().Where(x => x.DisciplinaId == idDisciplina).ToListAsync();
+            if (listView != null) listView.ItemsSource = turmaDisciplinas;
+            return turmaDisciplinas;
+        }
+        public static async Task<List<ResponsavelAluno>> getAllResponsavelAlunosByResponsavelId(string idResponsavel = "", ListView listView = null)
+        {
+            List<ResponsavelAluno> responsavelAlunos = await App.MobileService.GetTable<ResponsavelAluno>().Where(x => x.ResponsavelId == idResponsavel).ToListAsync();
+            if (listView != null) listView.ItemsSource = responsavelAlunos;
+            return responsavelAlunos;
+        }
+        public static async Task<List<ResponsavelAluno>> getAllResponsavelAlunosByAlunoId(string idAluno = "", ListView listView = null)
+        {
+            List<ResponsavelAluno> responsavelAlunos = await App.MobileService.GetTable<ResponsavelAluno>().Where(x => x.AlunoId == idAluno).ToListAsync();
+            if (listView != null) listView.ItemsSource = responsavelAlunos;
+            return responsavelAlunos;
+        }
+        public static async Task<List<Turma>> getAllTurmasToListViewBySerieId(string idSerie = "", ListView listView = null)
+        {
+            List<Turma> turmas = await App.MobileService.GetTable<Turma>().Where(x => x.SerieId == idSerie).ToListAsync();
+            if (listView != null) listView.ItemsSource = turmas;
+            return turmas;
+        }
+        public static async Task<List<Serie>> getAllSeriesToListViewByNomeSerie(string nomeSerie = "", ListView listView = null)
+        {
+            List<Serie> series = await App.MobileService.GetTable<Serie>().Where(x => x.Nome == nomeSerie).ToListAsync();
+            if (listView != null) listView.ItemsSource = series;
+            return series;
+        }
+        public static async Task<List<Nota>> getAllNotasToListViewByAlunoId(string idAluno = "", ListView listView = null)
+        {
+            List<Nota> notas = await App.MobileService.GetTable<Nota>().Where(x => x.AlunoId == idAluno).ToListAsync();
+            if (listView != null) listView.ItemsSource = notas;
+            return notas;
+        }
+        public static async Task<List<Nota>> getAllNotasToListViewByTurmaDisciplinaId(string idTurmaDisciplina = "", ListView listView = null)
+        {
+            List<Nota> notas = await App.MobileService.GetTable<Nota>().Where(x => x.TurmaDisciplinaId == idTurmaDisciplina).ToListAsync();
+            if (listView != null) listView.ItemsSource = notas;
+            return notas;
+        }
+        public static async Task<List<Admin>> getAllAdminsToListViewByMatricula(string matricula = "", ListView listView = null)
+        {
+            List<Admin> admins = await App.MobileService.GetTable<Admin>().Where(x => x.Matricula == matricula).ToListAsync();
+            if (listView != null) listView.ItemsSource = admins;
+            return admins;
+        }
+        public static async Task<List<Professor>> getAllProfessoresToListViewByMatricula(string matricula = "", ListView listView = null)
+        {
+            List<Professor> professors = await App.MobileService.GetTable<Professor>().Where(x => x.Matricula == matricula).ToListAsync();
+            if (listView != null) listView.ItemsSource = professors;
+            return professors;
+        }
+        public static async Task<List<Aluno>> getAllAlunosToListViewByMatricula(string matricula = "", ListView listView = null)
+        {
+            List<Aluno> alunos = await App.MobileService.GetTable<Aluno>().Where(x => x.Matricula == matricula).ToListAsync();
+            if (listView != null) listView.ItemsSource = alunos;
+            return alunos;
+        }
+        public static async Task<List<Aluno>> getAllAlunosToListViewByTurmaId(string idTurma = "", ListView listView = null)
+        {
+            List<Aluno> alunos = await App.MobileService.GetTable<Aluno>().Where(x => x.TurmaId == idTurma).ToListAsync();
+            if (listView != null) listView.ItemsSource = alunos;
+            return alunos;
+        }
+        public static async Task<List<Responsavel>> getAllResponsaveisToListViewByResponsavelId(string idResponsavel ="", ListView listView = null)
+        {
+            List<Responsavel> responsaveis = await App.MobileService.GetTable<Responsavel>().Where(x => x.Id == idResponsavel).ToListAsync();
+            if (listView != null) listView.ItemsSource = responsaveis;
+            return responsaveis;
+        }
+        public static async Task<List<Aula>> getAllAulasToListViewByFrequenciaId(string idFrequencia = "", ListView listView = null)
+        {
+            List<Aula> aulas = await App.MobileService.GetTable<Aula>().Where(x => x.FrequenciaId == idFrequencia).ToListAsync();
+            if (listView != null) listView.ItemsSource = aulas;
+            return aulas;
+        }
+        public static async Task<List<Aviso>> getAllAvisosToListViewByTurmaDisciplinaId(string idTurmaDisciplina = "", ListView listView = null)
+        {
+            List<Aviso> avisos = await App.MobileService.GetTable<Aviso>().Where(x => x.TurmaDisciplinaId == idTurmaDisciplina).ToListAsync();
+            if (listView != null) listView.ItemsSource = avisos;
+            return avisos;
+        }
+        public static async Task<List<Disciplina>> getAllDisciplinasToListViewByNomeDisciplina(string nomeDisciplina = "", ListView listView = null)
+        {
+            List<Disciplina> disciplinas = await App.MobileService.GetTable<Disciplina>().Where(x => x.Nome == nomeDisciplina).ToListAsync();
+            if (listView != null) listView.ItemsSource = disciplinas;
+            return disciplinas;
+        }
+        public static async Task<List<Frequencia>> getAllFrequenciasToListViewByTurmaDisciplinaId(string idTurmaDisciplina = "", ListView listView = null)
+        {
+            List<Frequencia> frequencias = await App.MobileService.GetTable<Frequencia>().Where(x => x.TurmaDisciplinaId == idTurmaDisciplina).ToListAsync();
+            if (listView != null) listView.ItemsSource = frequencias;
+            return frequencias;
+        }
+        public static async Task<List<Frequencia>> getAllFrequenciasToListViewByAlunoId(string idAluno = "", ListView listView = null)
+        {
+            List<Frequencia> frequencias = await App.MobileService.GetTable<Frequencia>().Where(x => x.AlunoId == idAluno).ToListAsync();
+            if (listView != null) listView.ItemsSource = frequencias;
+            return frequencias;
+        }
+        public static async Task<string> getSerieAlunoByAlunoId(string idTurma = "")
+        {
+            List<Turma> turma = await App.MobileService.GetTable<Turma>().Where(x => x.Id == idTurma).ToListAsync();
+            return turma[0].SerieId;
+        }
+        
 
         #endregion
 

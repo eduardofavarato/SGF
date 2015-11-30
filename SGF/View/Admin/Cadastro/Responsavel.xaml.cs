@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
@@ -29,7 +30,6 @@ namespace SGF.View.Admin.Cadastro
             this.InitializeComponent();
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
-            currentView.BackRequested += backButton_Tapped;
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -39,30 +39,40 @@ namespace SGF.View.Admin.Cadastro
             }
             catch (Exception) { }
         }
-        private void backButton_Tapped(object sender, BackRequestedEventArgs e)
+        private async void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
-            e.Handled = true;
-            if (Frame.CanGoBack)
-                try { Frame.GoBack(); }
-                catch (Exception) { }
-        }
+            try
+            {
+                Model.Responsavel a = (Model.Responsavel)listViewResponsaveis.SelectedItem;
+                a.Usuario.Nome = tbxNome.Text;
+                a.Usuario.Login = tbxLogin.Text;
+                a.Usuario.Senha = tbxSenha.Text;
 
-        private void btnSalvar_Click(object sender, RoutedEventArgs e)
+                databaseMethods.updateResponsavel(a, a.Usuario);
+                await new MessageDialog("Responsável Atualizado Com Sucesso!").ShowAsync();
+                Frame.Navigate(typeof(Responsavel));
+            }
+            catch (Exception) { }
+        }
+        private async void btnExcluir_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                Model.Responsavel r = (Model.Responsavel)listViewResponsaveis.SelectedItem;
+                databaseMethods.deleteResponsavel(r);
+                await new MessageDialog("Responsável Excluído Com Sucesso!").ShowAsync();
+                Frame.Navigate(typeof(Responsavel));
+            }
+            catch (Exception) { }
         }
-
-        private void btnExcluir_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private async void btnNovo_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                databaseMethods.insertResponsavel(tbxLogin.Text, tbxNome.Text, tbxSenha.Text);
+                Model.Responsavel responsavel = await databaseMethods.insertResponsavel(tbxLogin.Text, tbxNome.Text, tbxSenha.Text);
                 await new MessageDialog("Novo Responsável Inserido Com Sucesso!").ShowAsync();
+                listViewResponsaveis.Items.Add(responsavel);
+                Frame.Navigate(typeof(Responsavel));
             }
             catch (Exception) { }
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
@@ -15,13 +16,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace SGF.View.Admin.Cadastro
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class Admin : Page
     {
         public Admin()
@@ -29,7 +25,6 @@ namespace SGF.View.Admin.Cadastro
             this.InitializeComponent();
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
-            currentView.BackRequested += backButton_Tapped;
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -39,30 +34,42 @@ namespace SGF.View.Admin.Cadastro
             }
             catch (Exception) { }
         }
-        private void backButton_Tapped(object sender, BackRequestedEventArgs e)
+
+
+        private async void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
-            e.Handled = true;
-            if (Frame.CanGoBack)
-                try { Frame.GoBack(); }
-                catch (Exception) { }
-        }
+            try
+            {
+                Model.Admin a = (Model.Admin)listViewAdmins.SelectedItem;
+                a.Matricula = tbxMatricula.Text;
+                a.Usuario.Nome = tbxNome.Text;
+                a.Usuario.Login = tbxLogin.Text;
+                a.Usuario.Senha = tbxSenha.Text;
 
-        private void btnSalvar_Click(object sender, RoutedEventArgs e)
+                databaseMethods.updateAdmin(a, a.Usuario);
+                await new MessageDialog("Admin Atualizado Com Sucesso!").ShowAsync();
+                Frame.Navigate(typeof(Admin));
+            }
+            catch (Exception){ }
+        }
+        private async void btnExcluir_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                Model.Admin a = (Model.Admin)listViewAdmins.SelectedItem;
+                databaseMethods.deleteAdmin(a);
+                await new MessageDialog("Admin Excluído Com Sucesso!").ShowAsync();
+                Frame.Navigate(typeof(Admin));
+            }
+            catch (Exception) { }
         }
-
-        private void btnExcluir_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private async void btnNovo_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                databaseMethods.insertProfessor(tbxLogin.Text, tbxNome.Text, tbxSenha.Text, tbxMatricula.Text);
+                Model.Admin admin = await databaseMethods.insertAdmin(tbxLogin.Text, tbxNome.Text, tbxSenha.Text, tbxMatricula.Text);
                 await new MessageDialog("Novo Admin Inserido Com Sucesso!").ShowAsync();
+                Frame.Navigate(typeof(Admin));
             }
             catch (Exception) { }
         }

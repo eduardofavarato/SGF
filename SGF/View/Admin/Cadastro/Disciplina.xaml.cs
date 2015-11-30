@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
@@ -29,7 +30,6 @@ namespace SGF.View.Admin.Cadastro
             this.InitializeComponent();
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
-            currentView.BackRequested += backButton_Tapped;
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -39,30 +39,47 @@ namespace SGF.View.Admin.Cadastro
             }
             catch (Exception) { }
         }
-        private void backButton_Tapped(object sender, BackRequestedEventArgs e)
+
+
+        private async void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
-            e.Handled = true;
-            if (Frame.CanGoBack)
-                try { Frame.GoBack(); }
-                catch (Exception) { }
+            try
+            {
+                Model.Disciplina d = (Model.Disciplina)listViewDisciplinas.SelectedItem;
+                d.Nome = tbxNome.Text;
+                databaseMethods.updateDisciplina(d);
+                await new MessageDialog("Disciplina Atualizada Com Sucesso!").ShowAsync();
+                Frame.Navigate(typeof(Disciplina));
+            }
+            catch (Exception) { }
         }
-
-        private void btnSalvar_Click(object sender, RoutedEventArgs e)
+        private async void btnExcluir_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                Model.Disciplina d = (Model.Disciplina)listViewDisciplinas.SelectedItem;
+                List<Model.TurmaDisciplina> turmaDisciplinas = await databaseMethods.getAllTurmaDisciplinasByDisciplinaId(d.Id);
+                if (turmaDisciplinas.Count() > 0)
+                {
+                    await new MessageDialog("Existem " + turmaDisciplinas.Count().ToString() + " turmas utilizando esta disciplina. Para excluir uma disciplina, não devem existir turmas a utilizando!").ShowAsync();
+                }
+                else
+                {
+                    databaseMethods.deleteDisciplina(d);
+                    await new MessageDialog("Disciplina Excluída Com Sucesso!").ShowAsync();
+                    Frame.Navigate(typeof(Disciplina));
 
+                }
+            }
+            catch (Exception) { }
         }
-
-        private void btnExcluir_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private async void btnNovo_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                databaseMethods.insertDisciplina(tbxNome.Text);
+                Model.Disciplina disciplina = await databaseMethods.insertDisciplina(tbxNome.Text);
                 await new MessageDialog("Nova Disciplina Inserida Com Sucesso!").ShowAsync();
+                Frame.Navigate(typeof(Disciplina));
             }
             catch (Exception) { }
         }

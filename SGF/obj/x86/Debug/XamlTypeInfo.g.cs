@@ -146,7 +146,7 @@ namespace SGF.SGF_XamlTypeInfo
             _typeNameTable[10] = "SGF.View.Admin.Cadastro.Responsavel";
             _typeNameTable[11] = "SGF.View.Admin.Cadastro.Serie";
             _typeNameTable[12] = "SGF.View.Admin.Cadastro.Turma";
-            _typeNameTable[13] = "SGF.View.ViewProfessor";
+            _typeNameTable[13] = "SGF.View.Professor";
             _typeNameTable[14] = "SGF.View.Responsavel";
 
             _typeTable = new global::System.Type[15];
@@ -163,7 +163,7 @@ namespace SGF.SGF_XamlTypeInfo
             _typeTable[10] = typeof(global::SGF.View.Admin.Cadastro.Responsavel);
             _typeTable[11] = typeof(global::SGF.View.Admin.Cadastro.Serie);
             _typeTable[12] = typeof(global::SGF.View.Admin.Cadastro.Turma);
-            _typeTable[13] = typeof(global::SGF.View.ViewProfessor);
+            _typeTable[13] = typeof(global::SGF.View.Professor);
             _typeTable[14] = typeof(global::SGF.View.Responsavel);
         }
 
@@ -210,7 +210,7 @@ namespace SGF.SGF_XamlTypeInfo
         private object Activate_10_Responsavel() { return new global::SGF.View.Admin.Cadastro.Responsavel(); }
         private object Activate_11_Serie() { return new global::SGF.View.Admin.Cadastro.Serie(); }
         private object Activate_12_Turma() { return new global::SGF.View.Admin.Cadastro.Turma(); }
-        private object Activate_13_ViewProfessor() { return new global::SGF.View.ViewProfessor(); }
+        private object Activate_13_Professor() { return new global::SGF.View.Professor(); }
         private object Activate_14_Responsavel() { return new global::SGF.View.Responsavel(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
@@ -308,9 +308,9 @@ namespace SGF.SGF_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 13:   //  SGF.View.ViewProfessor
+            case 13:   //  SGF.View.Professor
                 userType = new global::SGF.SGF_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_ViewProfessor;
+                userType.Activator = Activate_13_Professor;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

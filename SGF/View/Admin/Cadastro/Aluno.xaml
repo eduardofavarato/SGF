@@ -26,8 +26,22 @@
         </Grid.RowDefinitions>
         <TextBlock x:Name="textBlock_cadastro" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="0" HorizontalAlignment="Center" 
                    TextWrapping="Wrap" Text="Cadastro de Alunos" VerticalAlignment="Center" FontWeight="Bold" FontSize="36"/>
-        <ListView x:Name="listViewAlunos" DisplayMemberPath="Nome" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="1" VerticalAlignment="Stretch"/>
-        <Grid Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="50,0,0,0">
+        <ListView x:Name="listViewAlunos" Grid.Column="1" HorizontalAlignment="Stretch" Margin="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="Black" BorderThickness="2" SelectionChanged="listViewAlunos_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Grid.Column="0" Text="{Binding Usuario.Nome}" />
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="3" Margin="50,0,0,0" DataContext="{Binding SelectedItem, ElementName=listViewAlunos}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -46,13 +60,13 @@
                 <RowDefinition Height="4*"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="Nome" Style="{StaticResource defaultTextBlock}" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,3" FontSize="16"/>
-            <TextBox Grid.Row="1" Grid.ColumnSpan="3" x:Name="tbxNome" PlaceholderText="Digite o nome do aluno.." Margin="0,0,0,15" FontSize="16" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="1" Grid.ColumnSpan="3" Text="{Binding Usuario.Nome}" x:Name="tbxNome" PlaceholderText="Digite o nome do aluno.." Margin="0,0,0,15" FontSize="16" VerticalAlignment="Center"/>
             <TextBlock Grid.Row="2" Grid.ColumnSpan="3" Text="Matrícula" Style="{StaticResource defaultTextBlock}" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,3" FontSize="16"/>
-            <TextBox Grid.Row="3" Grid.ColumnSpan="3" x:Name="tbxMatricula" PlaceholderText="Digite a matricula do aluno.." Margin="0,0,0,15" FontSize="16" VerticalAlignment="Center"/>
+            <TextBox Grid.Row="3" Grid.ColumnSpan="3" Text="{Binding Matricula}" x:Name="tbxMatricula" PlaceholderText="Digite a matricula do aluno.." Margin="0,0,0,15" FontSize="16" VerticalAlignment="Center"/>
             <TextBlock Grid.Row="4" Grid.ColumnSpan="3" Text="Serie" Style="{StaticResource defaultTextBlock}" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,3" FontSize="16"/>
-            <ComboBox Grid.Row="5" Grid.ColumnSpan="3" DisplayMemberPath="Nome" x:Name="cbxSerie" PlaceholderText="Escolha a série do aluno.." Margin="0,0,0,15" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectionChanged="cbxSerie_SelectionChanged"/>
+            <ComboBox Grid.Row="5" Grid.ColumnSpan="3" SelectedValuePath="Id" DisplayMemberPath="Nome" x:Name="cbxSerie" PlaceholderText="Escolha a série do aluno.." Margin="0,0,0,15" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectionChanged="cbxSerie_SelectionChanged"/>
             <TextBlock Grid.Row="6" Grid.ColumnSpan="3" Text="Turma" Style="{StaticResource defaultTextBlock}" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0,0,0,3" FontSize="16"/>
-            <ComboBox Grid.Row="7" Grid.ColumnSpan="3" DisplayMemberPath="Nome" x:Name="cbxTurma" PlaceholderText="Escolha a turma do aluno.." Margin="0,0,0,15" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+            <ComboBox Grid.Row="7" Grid.ColumnSpan="3" SelectedValuePath="Id" DisplayMemberPath="Nome" x:Name="cbxTurma" PlaceholderText="Escolha primeiro uma série.." Margin="0,0,0,15" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
             <Button x:Name="btnSalvar" Grid.Column="0" Grid.Row="8" Margin="20" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnSalvar_Click" FontSize="13.333">
                 <Button.Content>
                     <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">

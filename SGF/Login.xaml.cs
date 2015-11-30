@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -33,9 +34,18 @@ namespace SGF
         {
             this.InitializeComponent();
             carregarConfiguracao();
-            //databaseMethods.insertAdmin("admin", "Admin", "admin", "admin");
-            //databaseMethods.insertProfessor("professor", "Professor", "professor", "professor");
-            //databaseMethods.insertResponsavel("responsavel", "Responsavel", "responsavel");
+            var currentView = SystemNavigationManager.GetForCurrentView();
+            currentView.BackRequested += backButton_Tapped;
+        }
+        private void backButton_Tapped(object sender, BackRequestedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+
+            if (rootFrame.CanGoBack)
+            {
+                e.Handled = true;
+                rootFrame.GoBack();
+            }
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
@@ -59,22 +69,30 @@ namespace SGF
 
         private async void processaLogin(string login, string senha)
         {
-              if (login != "" && senha != "")
+            try
             {
-                if (!await databaseMethods.checkLogin(login, senha))
+                if (login != "" && senha != "")
                 {
-                    await new MessageDialog("Acesso Negado!").ShowAsync();
+                    if (!await databaseMethods.checkLogin(login, senha))
+                    {
+                        await new MessageDialog("Acesso Negado!").ShowAsync();
+                    }
+                    else
+                    {
+                        // await new MessageDialog("Bem Vindo!").ShowAsync();                    
+                        this.Frame.Navigate(typeof(View.Admin.Admin));
+                    }
                 }
                 else
                 {
-                    // await new MessageDialog("Bem Vindo!").ShowAsync();                    
-                    this.Frame.Navigate(typeof(View.Admin.Admin));
+                    await new MessageDialog("Por Favor Preencha todos os campos!").ShowAsync();
                 }
             }
-            else
+            catch (Exception)
             {
-                await new MessageDialog("Por Favor Preencha todos os campos!").ShowAsync();
+                await new MessageDialog("Falha na conexão!").ShowAsync();
             }
+            
         }
 
         private void salvarConfiguracao()
